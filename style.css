@@ -1,0 +1,469 @@
+@font-face {
+    font-family: poppins;
+    src: url(fonts/Poppins-Light.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body{
+    background-color: #081b29;
+    color: #ededed;
+}
+
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #ededed;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover{
+    color: #00abf0;
+}
+
+.Quiénsoy{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 0 10%;
+  
+}
+
+.Quiénsoy-content{
+    max-width: 600px;
+}
+
+.Quiénsoy-content h1{
+   font-size: 56px;
+   font-weight: 700; 
+}
+
+.Quiénsoy-content h3{
+    font-size: 32px;
+    font-weight: 700; 
+    color: #00abf0;
+ }
+
+ .Quiénsoy-content p{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 40px; 
+ }
+ .Quiénsoy-content .box{
+    width: 345px;
+    height: 50px;
+    
+ }
+ .box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: .5s;
+ }
+
+.box a:nth-child(1){
+    background: transparent;
+    color: #00abf0;
+}
+
+.box a:nth-child(1):hover{
+    color: #081b29;
+}
+
+.box a:nth-child(1)::before{
+    background: #00abf0;
+}
+
+ .box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#00abf0;
+    z-index: -1;
+    transition: .5s;
+ }
+
+ .box a:hover::before{
+    width:100%;
+ }
+
+ .copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #ededed;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    gap: 10px;
+}
+
+.copyright .redes {
+    display: flex;
+    flex-direction: row;       
+    gap: 20px;                  
+}
+
+.copyright .redes a {
+    font-size: 22px;
+    color: #00abf0;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.copyright .redes a:hover {
+    color: #ffffff;             
+}
+
+ .copyright p{
+    font-size: 10px;
+    font-weight: 700;
+    margin: 20px 0 40px; 
+ }
+ 
+
+.Quiénsoy-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+.Quiénsoy-img img {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: 5px solid #00abf0;
+    object-fit: cover;
+    box-shadow: 0 4px 15px #00abf0;
+}
+
+.Quiénsoy-img img:hover {
+    box-shadow: 0 0 20px #00abf0, 0 0 40px #00abf0;
+    transition: 0.4s ease;
+}
+
+/*css de quien soy*/
+
+.quien-soy-section {
+    min-height: 100vh;
+    padding: 120px 10% 60px;
+    background-color: #081b29;
+    color: #ededed;
+    text-align: left;
+}
+
+.quien-soy-content {
+    max-width: 800px;
+    margin: 0;
+    text-align: left;
+}
+
+.quien-soy-content h1 {
+    font-size: 48px;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+
+.quien-soy-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/*css cv*/
+
+.cv-section {
+    min-height: 100vh;
+    padding: 120px 10% 60px;
+    background-color: #081b29;
+    color: #ededed;
+    text-align: left;
+}
+
+.cv-content {
+    max-width: 800px;
+    margin: 0;
+    text-align: left;
+}
+
+.cv-content h1 {
+    font-size: 48px;
+    color: #00abf0;
+    margin-bottom: 30px;
+}
+
+.cv-content h2 {
+    font-size: 28px;
+    color: #00abf0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.cv-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.cv-content li {
+    font-size: 18px;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 20px;
+}
+
+.cv-content li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00abf0;
+}
+
+/*css contacto*/
+.contacto-section {
+    min-height: 100vh;
+    padding: 120px 10% 60px;
+    background-color: #081b29;
+    color: #ededed;
+}
+
+.contacto-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacto-content h1 {
+    font-size: 48px;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+
+.contacto-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario-contacto label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #0d2d42;
+    color: #ededed;
+}
+
+.formulario-contacto button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #00abf0;
+    color: #081b29;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+    background-color: #008ac6;
+}
+
+/*css de proyectos*/
+
+.proyectos-section {
+    min-height: 100vh;
+    padding: 120px 10%;
+    background-color: #081b29;
+    color: #ededed;
+}
+
+.proyectos-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.proyectos-content h1 {
+    font-size: 48px;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+
+.proyectos-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.proyecto-card {
+    background-color: #0d2d42;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 171, 240, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+}
+
+.proyecto-card h3 {
+    font-size: 22px;
+    color: #00abf0;
+    margin-bottom: 10px;
+}
+
+.proyecto-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.proyecto-card a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #00abf0;
+    color: #081b29;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.proyecto-card a:hover {
+    background-color: #008ac6;
+}
+
+/*css responsive*/
+/* Estilos para pantallas pequeñas: hasta 576px */
+@media (max-width: 576px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 5%;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .Quiénsoy {
+      flex-direction: column;
+      padding: 100px 5%;
+      text-align: center;
+    }
+  
+    .Quiénsoy-content {
+      max-width: 100%;
+    }
+  
+    .Quiénsoy-img img {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .cv-content,
+    .quien-soy-content,
+    .contacto-content,
+    .gracias-content,
+    .proyectos-content {
+      padding: 0 5%;
+      text-align: center;
+    }
+  
+    .formulario-contacto {
+      gap: 15px;
+    }
+  
+    .copyright {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  /*Estilos para pantallas medianas: hasta 992px */
+  @media (max-width: 992px) {
+    .Quiénsoy {
+      flex-direction: column;
+      text-align: center;
+      gap: 40px;
+    }
+  
+    .Quiénsoy-img img {
+      max-width: 300px;
+    }
+  
+    .navbar a {
+      font-size: 16px;
+      margin-left: 20px;
+    }
+  
+    .proyectos-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
