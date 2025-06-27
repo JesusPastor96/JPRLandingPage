@@ -45,6 +45,6 @@ Este proyecto forma parte de la asignatura **Lenguajes de Marcas y Sistemas de G
 ## 🙋‍♂️ Autor
 
 **Jesús Pastor Ricoy**  
-📧 e3c.pastor25@gmail.com  
+📧 jesus.pastor.ricoy@gmail.com 
 📍 Cádiz · Londres · Pamplona
 
