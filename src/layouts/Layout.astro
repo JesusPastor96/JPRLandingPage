@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Jesús Pastor Ricoy - Portfolio Personal. Titulado en DAW (Desarrollo de Aplicaciones Web) y estudiante de DAM (Desarrollo de Aplicaciones Multiplataforma). Quién soy, formación académica, experiencia y proyectos destacados." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+		<!-- Inline script to prevent theme flash -->
+		<script is:inline>
+			const getThemePreference = () => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			};
+			const isDark = getThemePreference() === 'dark';
+			document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+		</script>
+	</head>
+	<body class="relative min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary">
+		<!-- Background grid and ambient glows -->
+		<div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
+			<!-- Glowing blobs -->
+			<div class="absolute -top-[20%] -left-[10%] w-[60rem] h-[60rem] rounded-full bg-primary/10 dark:bg-primary/15 bg-glowing-glow animate-pulse-slow"></div>
+			<div class="absolute -bottom-[20%] -right-[10%] w-[50rem] h-[50rem] rounded-full bg-indigo-500/10 dark:bg-indigo-500/10 bg-glowing-glow animate-pulse-slow" style="animation-delay: -4s;"></div>
+			
+			<!-- Radial Grid overlay -->
+			<div class="absolute inset-0 bg-grid-pattern"></div>
+		</div>
+		
+		<slot />
+	</body>
+</html>

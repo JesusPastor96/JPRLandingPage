@@ -1,50 +1,43 @@
-# 💼 Portfolio Web - Jesús Pastor Ricoy
+# Astro Starter Kit: Minimal
 
-Este es mi portfolio personal desarrollado con **HTML y CSS**, donde muestro quién soy, mi experiencia, formación, proyectos destacados y un formulario de contacto.
+```sh
+npm create astro@latest -- --template minimal
+```
 
-🔗 **Enlace al sitio web publicado:**  
-👉 [https://jesuspastor96.github.io/JPRLandingPage](https://jesuspastor96.github.io/JPRLandingPage)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
----
+## 🚀 Project Structure
 
-## 📄 Contenido del portfolio
+Inside of your Astro project, you'll see the following folders and files:
 
-- 🏠 **Landing Page:** presentación inicial
-- 👤 **Quién soy:** sobre mí, motivaciones y objetivos
-- 📄 **CV:** formación académica, habilidades y experiencia
-- 🧩 **Proyectos destacados:** lista de proyectos desarrollados
-- ✉️ **Formulario de contacto:** para que puedan escribirme fácilmente
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
----
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-## 🛠️ Tecnologías utilizadas
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-- HTML5
-- CSS3
-- Boxicons
-- Responsive design (media queries para 576px y 992px)
+Any static assets, like images, can be placed in the `public/` directory.
 
----
+## 🧞 Commands
 
-## 📱 Diseño responsive
+All commands are run from the root of the project, from a terminal:
 
-El sitio está optimizado para pantallas pequeñas y medianas mediante `@media queries`, para asegurar una buena experiencia en:
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-- Móviles (≤ 576px)
-- Tablets (≤ 992px)
-- Escritorios
+## 👀 Want to learn more?
 
----
-
-## 🚀 Objetivo
-
-Este proyecto forma parte de la asignatura **Lenguajes de Marcas y Sistemas de Gestión de la Información** del ciclo **DAM (Desarrollo de Aplicaciones Multiplataforma)**.
-
----
-
-## 🙋‍♂️ Autor
-
-**Jesús Pastor Ricoy**  
-📧 jesus.pastor.ricoy@gmail.com 
-📍 Cádiz · Londres · Pamplona
-
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
