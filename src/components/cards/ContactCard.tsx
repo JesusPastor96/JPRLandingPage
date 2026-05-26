@@ -86,6 +86,7 @@ export default function ContactCard() {
               jesus.pastor.ricoy@gmail.com
             </a>
           </div>
+        </div>
       </div>
 
       <div className="lg:col-span-3 bg-background/40 dark:bg-card/10 border border-border/80 rounded-2xl p-5 relative overflow-hidden">
