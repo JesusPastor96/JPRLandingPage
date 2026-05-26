@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle, Mail, Phone, XCircle } from 'lucide-react';
+import { Send, CheckCircle, Mail, XCircle } from 'lucide-react';
 
 export default function ContactCard() {
   const [form, setForm] = useState({ nombre: '', email: '', mensaje: '' });
@@ -86,13 +86,6 @@ export default function ContactCard() {
               jesus.pastor.ricoy@gmail.com
             </a>
           </div>
-          <div className="flex items-center gap-3 p-3 rounded-xl border border-border/70 bg-card/50 text-sm sm:text-base">
-            <Phone className="w-4 h-4 text-primary shrink-0" />
-            <a href="tel:+34672705079" className="font-bold text-muted-foreground hover:text-foreground transition-colors">
-              +34 672 70 50 79
-            </a>
-          </div>
-        </div>
       </div>
 
       <div className="lg:col-span-3 bg-background/40 dark:bg-card/10 border border-border/80 rounded-2xl p-5 relative overflow-hidden">
