@@ -81,7 +81,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-10 border-b border-border/40 reveal">
+    <section className="py-10 border-b border-border/40">
       <div className="flex flex-col md:flex-row md:gap-8">
         <div className="md:w-1/4 shrink-0 mb-6 md:mb-0">
           <h3 className="text-2xl font-display font-bold text-foreground">{t("contact.title", "Contacto")}</h3>

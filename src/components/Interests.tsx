@@ -171,7 +171,7 @@ export default function Interests() {
   const currentMovie = translatedMovies[index] || moviesFallback[0];
 
   return (
-    <section className="py-10 border-b border-border/40 reveal">
+    <section className="py-10 border-b border-border/40">
       <div className="flex flex-col md:flex-row md:gap-8">
         <div className="md:w-1/4 shrink-0 mb-3 md:mb-0">
           <h3 className="text-xl font-display font-bold text-foreground">{t("interests.title", "Aficiones")}</h3>
