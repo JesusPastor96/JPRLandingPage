@@ -4,7 +4,6 @@ Bienvenido a mi porfolio desarrollado con **Astro**, una herramienta increíble 
 
 [![Visitar Porfolio](https://img.shields.io/badge/Visitar-jesuspastorricoy.com-4F46E5?style=for-the-badge&logo=vercel)](https://jesuspastorricoy.com)
 
-> 📸 _Puedes ver el resultado final en directo en [jesuspastorricoy.com](https://jesuspastorricoy.com)_
 
 ## 🚀 Empezando
 
