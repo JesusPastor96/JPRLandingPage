@@ -1,0 +1,79 @@
+---
+const experience = [
+  {
+    role: "Desarrollador web en prácticas",
+    company: "Biodatup, Pamplona",
+    period: "Enero 2026 - Abril 2026",
+    description: "Desarrollador Full-Stack en prácticas participando en la plataforma de ensayos clínicos mediante el desarrollo de APIs en Django, interfaces en React y gestión de bases de datos relacionales SQL."
+  },
+  {
+    role: "Responsable de almacén y distribución",
+    company: "Headlane Ltd., Londres",
+    period: "2020 – 2025",
+    description: "Organización y recepción de mercancía, control de inventario, clasificación de piezas de tecnología móvil, embalaje y soporte al almacén."
+  },
+  {
+    role: "Team Leader",
+    company: "Vital Ingredient, Londres",
+    period: "2018 – 2020",
+    description: "Atención al cliente, liderazgo de equipo, organización de tareas, pedidos, contacto con proveedores, control de stock y producción siguiendo procesos guiados."
+  },
+  {
+    role: "Asistente de Gerente",
+    company: "Infopapel, Cádiz",
+    period: "2015 – 2018",
+    description: "Control de stock, gestión de pedidos, atención a clientes, facturación, entregas, asesoramiento en toma decisiones y conocimiento de productos informáticos y oficina."
+  }
+];
+
+const education = [
+  {
+    title: "G.S. Desarrollo de Aplicaciones Web (DAW)",
+    institution: "UNIR - Universidad Internacional de La Rioja",
+    period: "2024 - 2026 (Graduado)",
+    description: "Estudio de diseño y desarrollo de páginas web, configuración de bases de datos, frameworks de frontend, frameworks de backend y desarrollo de aplicaciones."
+  },
+  {
+    title: "G.S. Administración y Finanzas",
+    institution: "IES Los Viveros",
+    period: "En curso (Pendiente Prácticas)",
+    description: "Gestión contable, fiscalidad, tesorería, documentación financiera y recursos humanos."
+  }
+];
+---
+
+<section class="py-10 border-b border-border/40">
+  <h3 class="text-2xl font-display font-bold text-foreground mb-8 reveal" data-i18n="experience.title">Experiencia Profesional</h3>
+  <div class="space-y-8">
+    {experience.map((exp, index) => (
+      <div class="flex flex-col md:flex-row md:gap-8 reveal delay-100">
+        <div class="md:w-1/4 shrink-0 mb-2 md:mb-0">
+          <span class="text-sm font-semibold text-muted-foreground/80" data-i18n={`experience.items.${index}.period`}>{exp.period}</span>
+        </div>
+        <div class="md:w-3/4">
+          <h4 class="text-lg font-bold text-foreground" data-i18n={`experience.items.${index}.role`}>{exp.role}</h4>
+          <span class="block text-sm font-semibold text-primary mb-2" data-i18n={`experience.items.${index}.company`}>{exp.company}</span>
+          <p class="text-base text-muted-foreground leading-relaxed" data-i18n={`experience.items.${index}.description`}>{exp.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="py-10 border-b border-border/40">
+  <h3 class="text-2xl font-display font-bold text-foreground mb-8 reveal" data-i18n="experience.eduTitle">Educación</h3>
+  <div class="space-y-8">
+    {education.map((edu, index) => (
+      <div class="flex flex-col md:flex-row md:gap-8 reveal delay-100">
+        <div class="md:w-1/4 shrink-0 mb-2 md:mb-0">
+          <span class="text-sm font-semibold text-muted-foreground/80" data-i18n={`experience.eduItems.${index}.period`}>{edu.period}</span>
+        </div>
+        <div class="md:w-3/4">
+          <h4 class="text-lg font-bold text-foreground" data-i18n={`experience.eduItems.${index}.title`}>{edu.title}</h4>
+          <span class="block text-sm font-semibold text-primary mb-2" data-i18n={`experience.eduItems.${index}.institution`}>{edu.institution}</span>
+          <p class="text-base text-muted-foreground leading-relaxed" data-i18n={`experience.eduItems.${index}.description`}>{edu.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

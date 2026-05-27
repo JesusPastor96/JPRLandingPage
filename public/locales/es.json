@@ -1,0 +1,222 @@
+{
+  "nav": {
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "source": "Código fuente"
+  },
+  "header": {
+    "greeting": "¡Hola! Soy",
+    "role": "Desarrollador Web Full-Stack",
+    "description": "Desarrollador Full Stack en Pamplona, España 🇪🇸. Apasionado por la tecnología, el diseño y la innovación continua. Comprometido con la creación de experiencias web excepcionales y soluciones eficientes.",
+    "available": "Disponible para trabajar"
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "items": [
+      {
+        "role": "Desarrollador web en prácticas",
+        "company": "Biodatup, Pamplona",
+        "period": "Enero 2026 - Abril 2026",
+        "description": "Desarrollador Full-Stack en prácticas participando en la plataforma de ensayos clínicos mediante el desarrollo de APIs en Django, interfaces en React y gestión de bases de datos relacionales SQL."
+      },
+      {
+        "role": "Responsable de almacén y distribución",
+        "company": "Headlane Ltd., Londres",
+        "period": "2020 – 2025",
+        "description": "Organización y recepción de mercancía, control de inventario, clasificación de piezas de tecnología móvil, embalaje y soporte al almacén."
+      },
+      {
+        "role": "Team Leader",
+        "company": "Vital Ingredient, Londres",
+        "period": "2018 – 2020",
+        "description": "Atención al cliente, liderazgo de equipo, organización de tareas, pedidos, contacto con proveedores, control de stock y producción siguiendo procesos guiados."
+      },
+      {
+        "role": "Asistente de Gerente",
+        "company": "Infopapel, Cádiz",
+        "period": "2015 – 2018",
+        "description": "Control de stock, gestión de pedidos, atención a clientes, facturación, entregas, asesoramiento en toma decisiones y conocimiento de productos informáticos y oficina."
+      }
+    ],
+    "eduTitle": "Educación",
+    "eduItems": [
+      {
+        "title": "G.S. Desarrollo de Aplicaciones Web (DAW)",
+        "period": "2024 - 2026 (Graduado)",
+        "description": "Estudio de diseño y desarrollo de páginas web, configuración de bases de datos, frameworks de frontend, frameworks de backend y desarrollo de aplicaciones."
+      },
+      {
+        "title": "G.S. Administración y Finanzas",
+        "period": "En curso (Pendiente Prácticas)",
+        "description": "Gestión contable, fiscalidad, tesorería, documentación financiera y recursos humanos."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "viewDemo": "Ver demo",
+    "viewGithub": "Ver en GitHub",
+    "items": [
+      {
+        "longDesc": "Un sistema desarrollado en consola para la gestión de relaciones con clientes. Utiliza JDBC para la comunicación con base de datos relacionales, implementando operaciones CRUD y manejo de excepciones, además de respaldo en ficheros planos para persistencia local de seguridad."
+      },
+      {
+        "longDesc": "Diseño y maquetación de una web personal completa con páginas interconectadas para Currículum Vitae, Quién soy, Proyectos y Contacto. Totalmente optimizada para visualización móvil y de tablets mediante media queries personalizadas."
+      },
+      {
+        "longDesc": "Un análisis arquitectónico exhaustivo para una plataforma de torneos de videojuegos de competición. Incluye diagramas de clases, diagramas de casos de uso y la especificación detallada del flujo de control aplicando el patrón de diseño Modelo-Vista-Controlador."
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "p1": "Nací en 1996 en Cádiz. Desde pequeño he sentido una gran curiosidad por el mundo digital, la tecnología y el cine, afición que me inspira a imaginar y crear.",
+    "p2": "En 2018 me mudé a Londres. Esta etapa ha sido clave para mi crecimiento personal, ayudándome a afrontar retos y a dominar el inglés trabajando en logística y liderazgo.",
+    "p3": "En agosto de 2025 me trasladé a Pamplona con mi esposa y su familia, donde resido actualmente e inicié mi carrera profesional en el sector tecnológico. Enfocado en el aprendizaje continuo y el trabajo en equipo."
+  },
+  "interests": {
+    "title": "Aficiones",
+    "intro": "Soy un gran apasionado del cine, una afición que no solo me sirve de desconexión, sino que me inspira profundamente en mi día a día como desarrollador. Me fascina encontrar paralelismos entre las grandes historias de la gran pantalla y la lógica del código.",
+    "random": "Inspiración Aleatoria",
+    "change": "Cambiar",
+    "movies": [
+      {
+        "title": "Inception (2010)",
+        "quote": "Construir realidades enteras desde cero mediante ideas sólidas.",
+        "relation": "Reflejo: Como programar, creamos mundos y lógica de la nada."
+      },
+      {
+        "title": "The Matrix (1999)",
+        "quote": "No intentes doblar la cuchara, eso es imposible. En su lugar, solo intenta darte cuenta de la verdad: no hay cuchara.",
+        "relation": "Reflejo: Entender el código y la abstracción detrás de lo visual."
+      },
+      {
+        "title": "Good Will Hunting (1997)",
+        "quote": "¿Te gusta el café? ¿Qué tal si resolvemos problemas juntos?",
+        "relation": "Reflejo: La pasión por desgranar y resolver problemas lógicos complejos."
+      },
+      {
+        "title": "Interstellar (2014)",
+        "quote": "El amor es lo único que somos capaces de percibir que trasciende las dimensiones de tiempo y espacio.",
+        "relation": "Reflejo: Perseverar ante bugs difíciles, buscando soluciones más allá de lo obvio."
+      },
+      {
+        "title": "The Social Network (2010)",
+        "quote": "Si fuerais los inventores de Facebook, habríais inventado Facebook.",
+        "relation": "Reflejo: El poder de transformar ideas creativas en código funcional."
+      },
+      {
+        "title": "The Truman Show (1998)",
+        "quote": "Buenos días... y por si no volvemos a vernos: buenos días, buenas tardes y buenas noches.",
+        "relation": "Reflejo: Salir de la zona de confort y trazar tus propios caminos."
+      },
+      {
+        "title": "Whiplash (2014)",
+        "quote": "No hay dos palabras en el idioma inglés más dañinas que 'buen trabajo'.",
+        "relation": "Reflejo: La búsqueda constante de la excelencia y pulir cada detalle."
+      },
+      {
+        "title": "The Dark Knight (2008)",
+        "quote": "O mueres como un héroe, o vives lo suficiente para verte convertido en el villano.",
+        "relation": "Reflejo: Refactorizar a tiempo: no dejes que tu código limpio se vuelva ilegible."
+      },
+      {
+        "title": "Back to the Future (1985)",
+        "quote": "¿Caminos? A donde vamos, no necesitamos caminos.",
+        "relation": "Reflejo: Innovar y crear soluciones que abran nuevos horizontes."
+      },
+      {
+        "title": "The Lord of the Rings (2001)",
+        "quote": "Todo lo que tenemos que decidir es qué hacer con el tiempo que se nos da.",
+        "relation": "Reflejo: Elegir las herramientas adecuadas para dejar un impacto duradero."
+      },
+      {
+        "title": "A Beautiful Mind (2001)",
+        "quote": "He mirado a través de lo físico, lo metafísico, lo ilusorio... y de vuelta.",
+        "relation": "Reflejo: La resolución constante de problemas lógicos y matemáticos abstractos."
+      },
+      {
+        "title": "Spider-Man (2002)",
+        "quote": "Un gran poder conlleva una gran responsabilidad.",
+        "relation": "Reflejo: La responsabilidad de gestionar servidores y bases de datos de usuarios."
+      },
+      {
+        "title": "Blade Runner (1982)",
+        "quote": "He visto cosas que vosotros no creeríais...",
+        "relation": "Reflejo: Enfrentarse a misteriosos bugs en producción que desaparecen al reiniciar."
+      },
+      {
+        "title": "Fight Club (1999)",
+        "quote": "La primera regla del club de la lucha es: no hablar del club de la lucha.",
+        "relation": "Reflejo: La primera regla del código limpio: debe ser legible sin comentarios redundantes."
+      },
+      {
+        "title": "Jurassic Park (1993)",
+        "quote": "No reparamos en gastos.",
+        "relation": "Reflejo: Cuando instalas 200MB de librerías npm solo para pedir datos o centrar un div."
+      },
+      {
+        "title": "The Lion King (1994)",
+        "quote": "Hakuna Matata. Significa sin preocupaciones.",
+        "relation": "Reflejo: Hacer deploy a producción un viernes por la tarde e irte a casa con optimismo."
+      },
+      {
+        "title": "Gladiator (2000)",
+        "quote": "¿No estáis entretenidos? ¿No es por esto por lo que estáis aquí?",
+        "relation": "Reflejo: Mostrar la demo final al cliente y ver que todo funciona sin fallos."
+      },
+      {
+        "title": "The Prestige (2006)",
+        "quote": "El truco consta de tres partes: la promesa, el giro y el prestigio.",
+        "relation": "Reflejo: Crear transiciones y micro-animaciones para ocultar llamadas API lentas."
+      },
+      {
+        "title": "Pulp Fiction (1994)",
+        "quote": "Di 'qué' otra vez. Te reto, te reto dos veces.",
+        "relation": "Reflejo: Cuando el compilador te da el mismo error diez veces seguidas."
+      },
+      {
+        "title": "Star Wars (1977)",
+        "quote": "Que la Fuerza te acompañe.",
+        "relation": "Reflejo: Que el compilador esté de tu lado y la build en producción no falle a la primera."
+      },
+      {
+        "title": "Forrest Gump (1994)",
+        "quote": "La vida es como una caja de bombones, nunca sabes lo que te va a tocar.",
+        "relation": "Reflejo: Heredar un repositorio antiguo sin ningún tipo de documentación."
+      },
+      {
+        "title": "Arrival (2016)",
+        "quote": "El lenguaje es la primera arma desenvainada en un conflicto.",
+        "relation": "Reflejo: Aprender un paradigma de programación completamente nuevo o cambiar de lenguaje."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes alguna propuesta o quieres saber más de mí?",
+    "successTitle": "¡Mensaje Enviado!",
+    "successDesc": "Gracias por escribirme. Te responderé lo antes posible.",
+    "errorTitle": "Error al enviar",
+    "errorDesc": "No se pudo enviar el mensaje. Por favor, inténtalo más tarde.",
+    "labels": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "name": "Tu nombre",
+      "email": "tu@correo.com",
+      "message": "¿En qué puedo ayudarte?"
+    },
+    "buttons": {
+      "sending": "Enviando...",
+      "send": "Enviar Mensaje"
+    }
+  }
+}

@@ -30,6 +30,44 @@ const { title, description = "Jesús Pastor Ricoy - Portfolio Personal. Titulado
 			const isDark = getThemePreference() === 'dark';
 			document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
 		</script>
+		<!-- i18n logic -->
+		<script src="/scripts/i18n.js" is:inline></script>
+		
+		<!-- Animation logic -->
+		<script is:inline>
+			function initAnimations() {
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('animate-in');
+							observer.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+				document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+			}
+
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', initAnimations);
+			} else {
+				initAnimations();
+			}
+		</script>
+		<style is:global>
+			.reveal {
+				opacity: 0;
+				transform: translateY(20px);
+				transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			.reveal.animate-in {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			.delay-100 { transition-delay: 100ms; }
+			.delay-200 { transition-delay: 200ms; }
+			.delay-300 { transition-delay: 300ms; }
+		</style>
 	</head>
 	<body class="relative min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary">
 		<!-- Background grid and ambient glows -->

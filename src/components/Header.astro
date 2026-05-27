@@ -1,0 +1,41 @@
+---
+import { Mail, Github, Linkedin } from 'lucide-react';
+---
+
+<header class="py-12 border-b border-border/40">
+  <div class="flex flex-col md:flex-row md:justify-between items-center gap-8">
+    <div class="order-2 md:order-1 text-center md:text-left reveal delay-100">
+      <h1 class="text-4xl md:text-5xl font-display font-extrabold text-foreground tracking-tight mb-2">
+        Jesús Pastor <span class="text-primary">Ricoy</span>
+      </h1>
+      <h2 class="text-xl md:text-2xl text-muted-foreground font-medium mb-4" data-i18n="header.role">
+        Desarrollador Web Full-Stack
+      </h2>
+      <p class="text-base text-muted-foreground/90 max-w-lg mb-6 leading-relaxed" data-i18n="header.description">
+        Desarrollador Full Stack en Pamplona, España 🇪🇸. Apasionado por la tecnología, el diseño y la innovación continua. Comprometido con la creación de experiencias web excepcionales y soluciones eficientes.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-muted-foreground/90 font-medium justify-center md:justify-start">
+        <a href="mailto:jesus.pastor.ricoy@gmail.com" class="flex items-center gap-2 justify-center hover:text-primary transition-colors">
+          <Mail class="w-4 h-4" />
+          <span>jesus.pastor.ricoy@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jes%C3%BAs-pastor-ricoy-4658a71a7/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 justify-center hover:text-primary transition-colors">
+          <Linkedin class="w-4 h-4" />
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/JesusPastor96" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 justify-center hover:text-primary transition-colors">
+          <Github class="w-4 h-4" />
+          <span>github.com/JesusPastor96</span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="order-1 md:order-2 shrink-0 reveal">
+      <img
+        src="/img/photo.png"
+        alt="Jesús Pastor Ricoy"
+        class="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover border-4 border-border/50 shadow-lg"
+      />
+    </div>
+  </div>
+</header>

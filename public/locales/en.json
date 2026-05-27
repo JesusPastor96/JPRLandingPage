@@ -1,0 +1,222 @@
+{
+  "nav": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "about": "About me",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "source": "Source code"
+  },
+  "header": {
+    "greeting": "Hi! I'm",
+    "role": "Full-Stack Web Developer",
+    "description": "Full Stack Developer in Pamplona, Spain 🇪🇸. Passionate about technology, design, and continuous innovation. Committed to creating exceptional web experiences and efficient solutions.",
+    "available": "Available for work"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "items": [
+      {
+        "role": "Intern Web Developer",
+        "company": "Biodatup, Pamplona",
+        "period": "January 2026 - April 2026",
+        "description": "Full-Stack intern participating in the clinical trials platform by developing APIs in Django, interfaces in React, and managing relational SQL databases."
+      },
+      {
+        "role": "Warehouse and Distribution Manager",
+        "company": "Headlane Ltd., London",
+        "period": "2020 – 2025",
+        "description": "Organization and receipt of merchandise, inventory control, sorting of mobile technology parts, packaging, and warehouse support."
+      },
+      {
+        "role": "Team Leader",
+        "company": "Vital Ingredient, London",
+        "period": "2018 – 2020",
+        "description": "Customer service, team leadership, task organization, ordering, supplier contact, stock control, and production following guided processes."
+      },
+      {
+        "role": "Assistant Manager",
+        "company": "Infopapel, Cádiz",
+        "period": "2015 – 2018",
+        "description": "Stock control, order management, customer service, billing, deliveries, decision-making advice, and knowledge of IT and office products."
+      }
+    ],
+    "eduTitle": "Education",
+    "eduItems": [
+      {
+        "title": "Higher Degree in Web Application Development (DAW)",
+        "period": "2024 - 2026 (Graduated)",
+        "description": "Study of web page design and development, database configuration, frontend frameworks, backend frameworks, and application development."
+      },
+      {
+        "title": "Higher Degree in Administration and Finance",
+        "period": "Ongoing (Pending Internship)",
+        "description": "Accounting management, taxation, treasury, financial documentation, and human resources."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewDemo": "View demo",
+    "viewGithub": "View on GitHub",
+    "items": [
+      {
+        "longDesc": "A console-developed system for managing customer relationships. It uses JDBC to communicate with relational databases, implementing CRUD operations and exception handling, alongside flat file backups for local security persistence."
+      },
+      {
+        "longDesc": "Design and layout of a complete personal website with interconnected pages for CV, About Me, Projects, and Contact. Fully optimized for mobile and tablet viewing using custom media queries."
+      },
+      {
+        "longDesc": "An exhaustive architectural analysis for a competitive video game tournament platform. It includes class diagrams, use case diagrams, and detailed specification of control flow applying the Model-View-Controller design pattern."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I was born in Cádiz in 1996. Since I was a child, I've had a great curiosity for the digital world, technology, and cinema—a passion that inspires me to imagine and create.",
+    "p2": "In 2018, I moved to London. This stage was key to my personal growth, helping me face challenges and master English while working in logistics and team leadership.",
+    "p3": "In August 2025, I moved to Pamplona with my wife and her family, where I currently reside and started my professional career in the technology sector. I am focused on continuous learning and teamwork."
+  },
+  "interests": {
+    "title": "Interests",
+    "intro": "I am highly passionate about cinema, a hobby that not only helps me disconnect but also deeply inspires me in my daily life as a developer. I find it fascinating to discover parallels between great big-screen stories and the logic of code.",
+    "random": "Random Inspiration",
+    "change": "Change",
+    "movies": [
+      {
+        "title": "Inception (2010)",
+        "quote": "To build entire realities from scratch using solid ideas.",
+        "relation": "Reflection: Like programming: we create worlds and logic out of nothing."
+      },
+      {
+        "title": "The Matrix (1999)",
+        "quote": "Do not try and bend the spoon, that's impossible. Instead, only try to realize the truth: there is no spoon.",
+        "relation": "Reflection: Understanding code and the abstraction behind the visual."
+      },
+      {
+        "title": "Good Will Hunting (1997)",
+        "quote": "Do you like coffee? How about we solve problems together?",
+        "relation": "Reflection: The passion for dissecting and solving complex logical problems."
+      },
+      {
+        "title": "Interstellar (2014)",
+        "quote": "Love is the one thing we're capable of perceiving that transcends dimensions of time and space.",
+        "relation": "Reflection: Persevering through difficult bugs, looking for solutions beyond the obvious."
+      },
+      {
+        "title": "The Social Network (2010)",
+        "quote": "If you guys were the inventors of Facebook, you'd have invented Facebook.",
+        "relation": "Reflection: The power of transforming creative ideas into functional code."
+      },
+      {
+        "title": "The Truman Show (1998)",
+        "quote": "Good morning... and in case I don't see ya: good afternoon, good evening, and good night.",
+        "relation": "Reflection: Stepping out of your comfort zone and carving your own paths."
+      },
+      {
+        "title": "Whiplash (2014)",
+        "quote": "There are no two words in the English language more harmful than 'good job'.",
+        "relation": "Reflection: The constant pursuit of excellence and polishing every detail."
+      },
+      {
+        "title": "The Dark Knight (2008)",
+        "quote": "You either die a hero, or you live long enough to see yourself become the villain.",
+        "relation": "Reflection: Refactoring on time: don't let your clean code become unreadable."
+      },
+      {
+        "title": "Back to the Future (1985)",
+        "quote": "Roads? Where we're going, we don't need roads.",
+        "relation": "Reflection: Innovating and creating solutions that open up new horizons."
+      },
+      {
+        "title": "The Lord of the Rings (2001)",
+        "quote": "All we have to decide is what to do with the time that is given to us.",
+        "relation": "Reflection: Choosing the right tools to leave a lasting impact."
+      },
+      {
+        "title": "A Beautiful Mind (2001)",
+        "quote": "I have looked through the physical, the metaphysical, the delusional... and back.",
+        "relation": "Reflection: The constant resolution of abstract logical and mathematical problems."
+      },
+      {
+        "title": "Spider-Man (2002)",
+        "quote": "With great power comes great responsibility.",
+        "relation": "Reflection: The responsibility of managing servers and user databases."
+      },
+      {
+        "title": "Blade Runner (1982)",
+        "quote": "I've seen things you people wouldn't believe...",
+        "relation": "Reflection: Facing mysterious production bugs that disappear upon restarting."
+      },
+      {
+        "title": "Fight Club (1999)",
+        "quote": "The first rule of Fight Club is: you do not talk about Fight Club.",
+        "relation": "Reflection: The first rule of clean code: it should be readable without redundant comments."
+      },
+      {
+        "title": "Jurassic Park (1993)",
+        "quote": "We spared no expense.",
+        "relation": "Reflection: When you install 200MB of npm libraries just to fetch data or center a div."
+      },
+      {
+        "title": "The Lion King (1994)",
+        "quote": "Hakuna Matata. It means no worries.",
+        "relation": "Reflection: Pushing to production late on a Friday and leaving the office with optimism."
+      },
+      {
+        "title": "Gladiator (2000)",
+        "quote": "Are you not entertained? Is this not why you are here?",
+        "relation": "Reflection: Showing the final product demo to the client and seeing everything work flawlessly."
+      },
+      {
+        "title": "The Prestige (2006)",
+        "quote": "The trick consists of three parts: the pledge, the turn, and the prestige.",
+        "relation": "Reflection: Creating smooth transitions and micro-animations to hide slow API calls."
+      },
+      {
+        "title": "Pulp Fiction (1994)",
+        "quote": "Say 'what' again. I dare you, I double dare you.",
+        "relation": "Reflection: When a compiler gives you the exact same error for the tenth time in a row."
+      },
+      {
+        "title": "Star Wars (1977)",
+        "quote": "May the Force be with you.",
+        "relation": "Reflection: May the compiler be on your side and the production build not fail on the first try."
+      },
+      {
+        "title": "Forrest Gump (1994)",
+        "quote": "Life is like a box of chocolates, you never know what you're gonna get.",
+        "relation": "Reflection: Taking over a legacy repository without any kind of documentation."
+      },
+      {
+        "title": "Arrival (2016)",
+        "quote": "Language is the first weapon drawn in a conflict.",
+        "relation": "Reflection: Learning a completely new programming paradigm or switching languages."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Do you have any proposals or want to know more about me?",
+    "successTitle": "Message Sent!",
+    "successDesc": "Thanks for writing. I will reply to you as soon as possible.",
+    "errorTitle": "Error sending",
+    "errorDesc": "The message could not be sent. Please try again later.",
+    "labels": {
+      "name": "Name",
+      "email": "Email address",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "you@email.com",
+      "message": "How can I help you?"
+    },
+    "buttons": {
+      "sending": "Sending...",
+      "send": "Send Message"
+    }
+  }
+}

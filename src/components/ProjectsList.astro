@@ -1,0 +1,76 @@
+---
+import { Github, MonitorPlay } from 'lucide-react';
+
+const projects = [
+  {
+    title: "ProyectoJava",
+    tech: [
+      { name: "Java", color: "bg-red-500 text-white" },
+      { name: "JDBC", color: "bg-blue-500 text-white" },
+      { name: "SQL", color: "bg-emerald-500 text-white" }
+    ],
+    github: "https://github.com/JesusPastor96/ProyectoJava",
+    demo: null,
+    longDesc: "Un sistema desarrollado en consola para la gestión de relaciones con clientes. Utiliza JDBC para la comunicación con base de datos relacionales, implementando operaciones CRUD y manejo de excepciones, además de respaldo en ficheros planos para persistencia local de seguridad."
+  },
+  {
+    title: "LandingPage",
+    tech: [
+      { name: "HTML", color: "bg-orange-500 text-white" },
+      { name: "CSS", color: "bg-blue-500 text-white" },
+      { name: "GitHub", color: "bg-zinc-800 text-white" }
+    ],
+    github: "https://github.com/JesusPastor96/LandingPage",
+    demo: "https://jesuspastor96.github.io/JPRLandingPage",
+    longDesc: "Diseño y maquetación de una web personal completa con páginas interconectadas para Currículum Vitae, Quién soy, Proyectos y Contacto. Totalmente optimizada para visualización móvil y de tablets mediante media queries personalizadas."
+  },
+  {
+    title: "eSports Tournament",
+    tech: [
+      { name: "UML", color: "bg-indigo-500 text-white" },
+      { name: "MVC", color: "bg-purple-500 text-white" },
+      { name: "GitHub", color: "bg-zinc-800 text-white" }
+    ],
+    github: "https://github.com/JesusPastor96/Actividad3-JesusPastorRicoy",
+    demo: null,
+    longDesc: "Un análisis arquitectónico exhaustivo para una plataforma de torneos de videojuegos de competición. Incluye diagramas de clases, diagramas de casos de uso y la especificación detallada del flujo de control aplicando el patrón de diseño Modelo-Vista-Controlador."
+  }
+];
+---
+
+<section class="py-10 border-b border-border/40">
+  <h3 class="text-2xl font-display font-bold text-foreground mb-8 reveal" data-i18n="projects.title">Proyectos Destacados</h3>
+  <div class="space-y-12">
+    {projects.map((project, index) => (
+      <div class="flex flex-col md:flex-row md:gap-8 group hover:bg-muted/20 hover:-translate-y-1 hover:shadow-lg p-5 -mx-5 rounded-2xl transition-all duration-300 reveal delay-100 border border-transparent hover:border-border/50">
+        <div class="md:w-1/4 shrink-0 mb-3 md:mb-0">
+          <h4 class="text-lg font-bold text-foreground">{project.title}</h4>
+        </div>
+        <div class="md:w-3/4 flex flex-col justify-between">
+          <p class="text-base text-muted-foreground leading-relaxed mb-4" data-i18n={`projects.items.${index}.longDesc`}>
+            {project.longDesc}
+          </p>
+          
+          <div class="flex flex-wrap gap-2 mb-5">
+            {project.tech.map((t) => (
+              <span class={`font-bold rounded-full px-3 py-1 text-xs select-none ${t.color}`}>
+                {t.name}
+              </span>
+            ))}
+          </div>
+
+          <div class="flex items-center gap-5 text-sm font-semibold">
+            {project.demo && (
+              <a href={project.demo} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-primary hover:underline transition-all">
+                <MonitorPlay class="w-4 h-4" /> <span data-i18n="projects.viewDemo">Ver demo</span>
+              </a>
+            )}
+            <a href={project.github} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
+              <Github class="w-4 h-4" /> <span data-i18n="projects.viewGithub">Ver en GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
