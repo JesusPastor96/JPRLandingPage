@@ -1,43 +1,56 @@
-# Astro Starter Kit: Minimal
+# Porfolio de Jesús Pastor Ricoy
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Bienvenido a mi porfolio desarrollado con **Astro**, una herramienta increíble para construir sitios web modernos y extremadamente rápidos. Este porfolio es una representación de mi trabajo, habilidades tecnológicas, experiencia y los proyectos en los que he trabajado.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![Visitar Porfolio](https://img.shields.io/badge/Visitar-jesuspastorricoy.com-4F46E5?style=for-the-badge&logo=vercel)](https://jesuspastorricoy.com)
 
-## 🚀 Project Structure
+> 📸 _Puedes ver el resultado final en directo en [jesuspastorricoy.com](https://jesuspastorricoy.com)_
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Empezando
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Para iniciar el proyecto en tu entorno local, sigue estos sencillos pasos:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. **Clona el repositorio:**
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+   ```bash
+   git clone https://github.com/JesusPastor96/JPRLandingPage.git
+   ```
 
-Any static assets, like images, can be placed in the `public/` directory.
+2. **Instala las dependencias:**
 
-## 🧞 Commands
+   ```bash
+   npm install
+   ```
 
-All commands are run from the root of the project, from a terminal:
+3. **Inicia el servidor de desarrollo:**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   ```bash
+   npm run dev
+   ```
 
-## 👀 Want to learn more?
+4. **Visualiza el proyecto:**
+   Visita `http://localhost:4321` en tu navegador para ver el porfolio en acción.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🛠️ Construido con
+
+- **[Astro](https://astro.build/)** - El framework principal enfocado en el rendimiento y la velocidad.
+- **[Tailwind CSS](https://tailwindcss.com/)** - Para estilos rápidos, modernos y completamente responsivos.
+- **[React](https://reactjs.org/)** - Usado para los componentes interactivos, el selector de idiomas y el formulario.
+- **[TypeScript](https://www.typescriptlang.org/)** - Añadiendo tipado estático para un código más robusto y escalable.
+- **i18n** - Soporte nativo para múltiples idiomas (Español / Inglés).
+
+## ✍️ Autores
+
+- **Jesús Pastor Ricoy** - Desarrollador Web Full-Stack y creador del porfolio.
+  - LinkedIn: [Jesús Pastor Ricoy](https://www.linkedin.com/in/jes%C3%BAs-pastor-ricoy-4658a71a7/)
+  - GitHub: [@JesusPastor96](https://github.com/JesusPastor96)
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia **MIT** - eres libre de usar el código para inspirarte o adaptarlo a tus necesidades.
+
+## 🎉 Agradecimientos
+
+- A la comunidad de Astro y React por hacer posible este ecosistema increíble.
+- A ti, por visitar mi porfolio y pasarte por este repositorio.
+- A todos los profesionales y compañeros que me han apoyado en mi carrera.
