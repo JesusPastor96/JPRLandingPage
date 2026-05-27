@@ -17,9 +17,37 @@ const { title, description = "Jesús Pastor Ricoy - Portfolio Personal. Titulado
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
 		
-		<!-- Inline script to prevent theme flash -->
+		<title>{title}</title>
+		<link rel="canonical" href="https://jesuspastor.vercel.app" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://jesuspastor.vercel.app" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="https://jesuspastor.vercel.app/img/photo.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		
+		<script type="application/ld+json">
+			{
+			  "@context": "https://schema.org",
+			  "@type": "Person",
+			  "name": "Jesús Pastor Ricoy",
+			  "jobTitle": "Desarrollador Web Full-Stack",
+			  "url": "https://jesuspastor.vercel.app",
+			  "image": "https://jesuspastor.vercel.app/img/photo.png",
+			  "sameAs": [
+				"https://github.com/JesusPastor96",
+				"https://www.linkedin.com/in/jesús-pastor-ricoy-4658a71a7/"
+			  ],
+			  "alumniOf": "UNIR - Universidad Internacional de La Rioja",
+			  "address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Pamplona",
+				"addressCountry": "ES"
+			  }
+			}
+		</script>
+		
 		<script is:inline>
 			const getThemePreference = () => {
 				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -30,10 +58,7 @@ const { title, description = "Jesús Pastor Ricoy - Portfolio Personal. Titulado
 			const isDark = getThemePreference() === 'dark';
 			document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
 		</script>
-		<!-- i18n logic -->
 		<script src="/scripts/i18n.js" is:inline></script>
-		
-		<!-- Animation logic -->
 		<script is:inline>
 			function initAnimations() {
 				const observer = new IntersectionObserver((entries) => {
@@ -70,13 +95,10 @@ const { title, description = "Jesús Pastor Ricoy - Portfolio Personal. Titulado
 		</style>
 	</head>
 	<body class="relative min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary">
-		<!-- Background grid and ambient glows -->
 		<div class="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
-			<!-- Glowing blobs -->
 			<div class="absolute -top-[20%] -left-[10%] w-[60rem] h-[60rem] rounded-full bg-primary/10 dark:bg-primary/15 bg-glowing-glow animate-pulse-slow"></div>
 			<div class="absolute -bottom-[20%] -right-[10%] w-[50rem] h-[50rem] rounded-full bg-indigo-500/10 dark:bg-indigo-500/10 bg-glowing-glow animate-pulse-slow" style="animation-delay: -4s;"></div>
 			
-			<!-- Radial Grid overlay -->
 			<div class="absolute inset-0 bg-grid-pattern"></div>
 		</div>
 		

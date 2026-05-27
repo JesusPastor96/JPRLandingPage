@@ -7,7 +7,6 @@ export default function LanguageSelector({ currentLang: initialLang }: { current
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Initialize from localStorage on mount
     const savedLang = localStorage.getItem('lang') as 'es' | 'en';
     const domLang = document.documentElement.getAttribute('data-lang') as 'es' | 'en';
     
@@ -17,7 +16,6 @@ export default function LanguageSelector({ currentLang: initialLang }: { current
       setLang(domLang);
     }
 
-    // Update if i18n script loads after
     const handleLangLoaded = () => {
       const updated = document.documentElement.getAttribute('data-lang') as 'es' | 'en';
       if (updated) setLang(updated);
@@ -40,7 +38,6 @@ export default function LanguageSelector({ currentLang: initialLang }: { current
     setLang(newLang);
     setIsOpen(false);
     
-    // Call the global function from i18n.js
     if (typeof window !== 'undefined' && (window as any).changeLanguage) {
       (window as any).changeLanguage(newLang);
     }
