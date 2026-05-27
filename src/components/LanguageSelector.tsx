@@ -7,9 +7,22 @@ export default function LanguageSelector({ currentLang: initialLang }: { current
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Initialize from DOM or localStorage on mount
-    const current = document.documentElement.getAttribute('data-lang') as 'es' | 'en';
-    if (current) setLang(current);
+    // Initialize from localStorage on mount
+    const savedLang = localStorage.getItem('lang') as 'es' | 'en';
+    const domLang = document.documentElement.getAttribute('data-lang') as 'es' | 'en';
+    
+    if (savedLang && ['es', 'en'].includes(savedLang)) {
+      setLang(savedLang);
+    } else if (domLang) {
+      setLang(domLang);
+    }
+
+    // Update if i18n script loads after
+    const handleLangLoaded = () => {
+      const updated = document.documentElement.getAttribute('data-lang') as 'es' | 'en';
+      if (updated) setLang(updated);
+    };
+    window.addEventListener('languageLoaded', handleLangLoaded);
 
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -17,7 +30,10 @@ export default function LanguageSelector({ currentLang: initialLang }: { current
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener('languageLoaded', handleLangLoaded);
+    };
   }, []);
 
   const changeLang = (newLang: 'es' | 'en') => {
