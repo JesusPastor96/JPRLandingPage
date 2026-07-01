@@ -71,9 +71,6 @@
         "longDesc": "A complete application for managing and booking ballroom dancing classes. A collaborative project structured in a decoupled architecture with Java server logic and a TypeScript user interface, facilitating a dynamic real-time booking flow and user management."
       },
       {
-        "longDesc": "Design and layout of a complete personal website with interconnected pages for CV, About Me, Projects, and Contact. Fully optimized for mobile and tablet viewing using custom media queries."
-      },
-      {
         "longDesc": "An exhaustive architectural analysis for a competitive video game tournament platform. It includes class diagrams, use case diagrams, and detailed specification of control flow applying the Model-View-Controller design pattern."
       }
     ]

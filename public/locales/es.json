@@ -71,9 +71,6 @@
         "longDesc": "Aplicación completa para la gestión y reserva de clases de bailes de salón. Proyecto colaborativo estructurado en una arquitectura desacoplada con la lógica del servidor en Java y la interfaz de usuario en TypeScript, facilitando un flujo dinámico de reservas en tiempo real y gestión de usuarios."
       },
       {
-        "longDesc": "Diseño y maquetación de una web personal completa con páginas interconectadas para Currículum Vitae, Quién soy, Proyectos y Contacto. Totalmente optimizada para visualización móvil y de tablets mediante media queries personalizadas."
-      },
-      {
         "longDesc": "Un análisis arquitectónico exhaustivo para una plataforma de torneos de videojuegos de competición. Incluye diagramas de clases, diagramas de casos de uso y la especificación detallada del flujo de control aplicando el patrón de diseño Modelo-Vista-Controlador."
       }
     ]
