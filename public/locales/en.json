@@ -61,9 +61,14 @@
     "title": "Featured Projects",
     "viewDemo": "View demo",
     "viewGithub": "View on GitHub",
+    "viewGithubBE": "GitHub (Backend)",
+    "viewGithubFE": "GitHub (Frontend)",
     "items": [
       {
-        "longDesc": "A console-developed system for managing customer relationships. It uses JDBC to communicate with relational databases, implementing CRUD operations and exception handling, alongside flat file backups for local security persistence."
+        "longDesc": "A comprehensive web platform designed to digitize the operations of the hospitality sector (HORECA). The backend is built with Spring Boot 3 and Java 21, featuring JWT security, JPA/Hibernate persistence, and a PostgreSQL database running on Docker. The frontend is built with Angular, implementing employee and owner dashboards with role-based access control."
+      },
+      {
+        "longDesc": "A complete application for managing and booking ballroom dancing classes. A collaborative project structured in a decoupled architecture with Java server logic and a TypeScript user interface, facilitating a dynamic real-time booking flow and user management."
       },
       {
         "longDesc": "Design and layout of a complete personal website with interconnected pages for CV, About Me, Projects, and Contact. Fully optimized for mobile and tablet viewing using custom media queries."

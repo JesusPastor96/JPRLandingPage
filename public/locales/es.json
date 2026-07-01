@@ -61,9 +61,14 @@
     "title": "Proyectos Destacados",
     "viewDemo": "Ver demo",
     "viewGithub": "Ver en GitHub",
+    "viewGithubBE": "GitHub (Backend)",
+    "viewGithubFE": "GitHub (Frontend)",
     "items": [
       {
-        "longDesc": "Un sistema desarrollado en consola para la gestión de relaciones con clientes. Utiliza JDBC para la comunicación con base de datos relacionales, implementando operaciones CRUD y manejo de excepciones, además de respaldo en ficheros planos para persistencia local de seguridad."
+        "longDesc": "Plataforma web integral diseñada para digitalizar la operativa del sector hostelero (HORECA). El backend está desarrollado en Spring Boot 3 con Java 21, utilizando seguridad JWT, persistencia mediante JPA/Hibernate y base de datos PostgreSQL ejecutada en Docker. El frontend está maquetado en Angular, implementando vistas para empleados y dueños con control de accesos basado en roles."
+      },
+      {
+        "longDesc": "Aplicación completa para la gestión y reserva de clases de bailes de salón. Proyecto colaborativo estructurado en una arquitectura desacoplada con la lógica del servidor en Java y la interfaz de usuario en TypeScript, facilitando un flujo dinámico de reservas en tiempo real y gestión de usuarios."
       },
       {
         "longDesc": "Diseño y maquetación de una web personal completa con páginas interconectadas para Currículum Vitae, Quién soy, Proyectos y Contacto. Totalmente optimizada para visualización móvil y de tablets mediante media queries personalizadas."

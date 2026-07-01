@@ -3,15 +3,29 @@ import { Github, MonitorPlay } from 'lucide-react';
 
 const projects = [
   {
-    title: "ProyectoJava",
+    title: "TeamPlate (TFG)",
+    tech: [
+      { name: "Spring Boot 3", color: "bg-emerald-600 text-white" },
+      { name: "Angular", color: "bg-red-600 text-white" },
+      { name: "PostgreSQL", color: "bg-sky-600 text-white" },
+      { name: "Docker", color: "bg-blue-500 text-white" }
+    ],
+    githubBE: "https://github.com/JesusPastor96/TFG_BE",
+    githubFE: "https://github.com/JesusPastor96/TFG_FE",
+    demo: null,
+    longDesc: "Plataforma web integral diseñada para digitalizar la operativa del sector hostelero (HORECA). El backend está desarrollado en Spring Boot 3 con Java 21, utilizando seguridad JWT, persistencia mediante JPA/Hibernate y base de datos PostgreSQL ejecutada en Docker. El frontend está maquetado en Angular, implementando vistas para empleados y dueños con control de accesos basado en roles."
+  },
+  {
+    title: "Bailes de Salón (El Reto)",
     tech: [
       { name: "Java", color: "bg-red-500 text-white" },
-      { name: "JDBC", color: "bg-blue-500 text-white" },
+      { name: "TypeScript", color: "bg-blue-500 text-white" },
       { name: "SQL", color: "bg-emerald-500 text-white" }
     ],
-    github: "https://github.com/JesusPastor96/ProyectoJava",
-    demo: null,
-    longDesc: "Un sistema desarrollado en consola para la gestión de relaciones con clientes. Utiliza JDBC para la comunicación con base de datos relacionales, implementando operaciones CRUD y manejo de excepciones, además de respaldo en ficheros planos para persistencia local de seguridad."
+    githubBE: "https://github.com/sofiaffernandez/Reto",
+    githubFE: "https://github.com/assxavi/retoFrontend",
+    demo: "https://reto.alvaropj.com/",
+    longDesc: "Aplicación completa para la gestión y reserva de clases de bailes de salón. Proyecto colaborativo estructurado en una arquitectura desacoplada con la lógica del servidor en Java y la interfaz de usuario en TypeScript, facilitando un flujo dinámico de reservas en tiempo real y gestión de usuarios."
   },
   {
     title: "LandingPage",
@@ -65,9 +79,21 @@ const projects = [
                 <MonitorPlay class="w-4 h-4" /> <span data-i18n="projects.viewDemo">Ver demo</span>
               </a>
             )}
-            <a href={project.github} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
-              <Github class="w-4 h-4" /> <span data-i18n="projects.viewGithub">Ver en GitHub</span>
-            </a>
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
+                <Github class="w-4 h-4" /> <span data-i18n="projects.viewGithub">Ver en GitHub</span>
+              </a>
+            )}
+            {project.githubBE && (
+              <a href={project.githubBE} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
+                <Github class="w-4 h-4" /> <span data-i18n="projects.viewGithubBE">GitHub (Backend)</span>
+              </a>
+            )}
+            {project.githubFE && (
+              <a href={project.githubFE} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
+                <Github class="w-4 h-4" /> <span data-i18n="projects.viewGithubFE">GitHub (Frontend)</span>
+              </a>
+            )}
           </div>
         </div>
       </div>
