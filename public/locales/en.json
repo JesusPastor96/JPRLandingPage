@@ -19,28 +19,34 @@
     "title": "Professional Experience",
     "items": [
       {
+        "role": "Freelance Full-Stack Web Developer",
+        "company": "Bubblerally Tennis Platform",
+        "period": "August 2026",
+        "description": "Design, development, and <strong>production deployment</strong> of a comprehensive <strong>SaaS platform</strong> for tennis court bookings and academy management. Backend built with <strong>Spring Boot 3</strong> and <strong>Java 21</strong> following <strong>clean architecture (SOLID)</strong>, with <strong>Stripe</strong> integration (Apple Pay, Google Pay). Frontend in <strong>Angular 18 Standalone</strong>, deployed on <strong>IONOS VPS</strong> via <strong>Docker</strong> and automated <strong>CI/CD</strong> pipelines."
+      },
+      {
         "role": "Intern Web Developer",
         "company": "Biodatup, Pamplona",
         "period": "January 2026 - April 2026",
-        "description": "Full-Stack intern participating in the clinical trials platform by developing APIs in Django, interfaces in React, and managing relational SQL databases."
+        "description": "Active participation in building a <strong>clinical trials platform</strong>, developing backend services with <strong>Django</strong> and modern frontend interfaces in <strong>React</strong>. Design of <strong>relational data models</strong> and SQL queries aimed at delivering reliable insights for clinical and product teams."
       },
       {
         "role": "Logistics Specialist",
         "company": "Headlane Ltd., London",
         "period": "2020 – 2025",
-        "description": "Organization and receipt of merchandise, inventory control, sorting of mobile technology parts, packaging, and warehouse support."
+        "description": "End-to-end management of <strong>merchandise reception and sorting</strong> for mobile technology. Implementation of <strong>inventory control</strong> processes and coordination of efficient parts <strong>distribution</strong>, ensuring traceability and on-time delivery."
       },
       {
         "role": "Team Leader",
         "company": "Vital Ingredient, London",
         "period": "2018 – 2020",
-        "description": "Customer service, team leadership, task organization, ordering, supplier contact, stock control, and production following guided processes."
+        "description": "Operational team leadership focused on <strong>customer service</strong>, <strong>task organization</strong>, and <strong>supplier relations</strong>. Oversight of <strong>stock control</strong> and daily production under standardized processes, ensuring efficiency and quality of service."
       },
       {
         "role": "Assistant Manager",
         "company": "Infopapel, Cádiz",
         "period": "2015 – 2018",
-        "description": "Stock control, order management, customer service, billing, deliveries, decision-making advice, and knowledge of IT and office products."
+        "description": "Ownership of <strong>stock control</strong>, <strong>order management</strong>, direct customer service, and <strong>billing</strong>. Advisory role in <strong>decision-making</strong> on IT and office products, contributing to the business's commercial growth."
       }
     ],
     "eduTitle": "Education",
@@ -64,6 +70,9 @@
     "viewGithubBE": "GitHub (Backend)",
     "viewGithubFE": "GitHub (Frontend)",
     "items": [
+      {
+        "longDesc": "Comprehensive SaaS platform for court bookings, tennis academy management, and online payments. Built with Clean Architecture (SOLID) using Spring Boot 3 with Java 21 and Angular 18 Standalone. Features adaptive Stripe payment processing (Apple/Google Pay), real-time booking systems, automated calendar exports (.ics), official PDF receipt generation, smart waitlists with email notifications, and an administrative management panel. Deployed in production via automated CI/CD."
+      },
       {
         "longDesc": "A comprehensive web platform designed to digitize the operations of the hospitality sector (HORECA). The backend is built with Spring Boot 3 and Java 21, featuring JWT security, JPA/Hibernate persistence, and a PostgreSQL database running on Docker. The frontend is built with Angular, implementing employee and owner dashboards with role-based access control."
       },

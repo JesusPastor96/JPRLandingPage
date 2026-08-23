@@ -19,28 +19,34 @@
     "title": "Experiencia Profesional",
     "items": [
       {
+        "role": "Desarrollador Web Freelance Full-Stack",
+        "company": "Bubblerally Tennis Platform",
+        "period": "Agosto 2026",
+        "description": "Diseño, desarrollo y puesta en <strong>producción</strong> de una <strong>plataforma SaaS integral</strong> de reservas de pistas de tenis y gestión de academias. Backend construido con <strong>Spring Boot 3</strong> y <strong>Java 21</strong> bajo <strong>arquitectura limpia (SOLID)</strong>, con integración de <strong>Stripe</strong> (Apple Pay, Google Pay). Frontend en <strong>Angular 18 Standalone</strong>, desplegado en <strong>VPS IONOS</strong> mediante <strong>Docker</strong> y pipelines <strong>CI/CD</strong> automatizados."
+      },
+      {
         "role": "Desarrollador web en prácticas",
         "company": "Biodatup, Pamplona",
         "period": "Enero 2026 - Abril 2026",
-        "description": "Desarrollador Full-Stack en prácticas participando en la plataforma de ensayos clínicos mediante el desarrollo de APIs en Django, interfaces en React y gestión de bases de datos relacionales SQL."
+        "description": "Participación activa en la construcción de una <strong>plataforma de ensayos clínicos</strong>, desarrollando servicios backend con <strong>Django</strong> e interfaces frontend modernas en <strong>React</strong>. Diseño de <strong>modelos de datos relacionales</strong> y consultas SQL orientadas a ofrecer información fiable para los equipos clínicos y de producto."
       },
       {
         "role": "Responsable de almacén y distribución",
         "company": "Headlane Ltd., Londres",
         "period": "2020 – 2025",
-        "description": "Organización y recepción de mercancía, control de inventario, clasificación de piezas de tecnología móvil, embalaje y soporte al almacén."
+        "description": "Gestión integral de la <strong>recepción y clasificación de mercancía</strong> de tecnología móvil. Implementación de procesos de <strong>control de inventario</strong> y coordinación de la <strong>distribución</strong> eficiente de piezas, asegurando trazabilidad y cumplimiento de plazos de entrega."
       },
       {
         "role": "Team Leader",
         "company": "Vital Ingredient, Londres",
         "period": "2018 – 2020",
-        "description": "Atención al cliente, liderazgo de equipo, organización de tareas, pedidos, contacto con proveedores, control de stock y producción siguiendo procesos guiados."
+        "description": "Liderazgo de un equipo operativo con foco en <strong>atención al cliente</strong>, <strong>organización de tareas</strong> y <strong>contacto con proveedores</strong>. Supervisión del <strong>control de stock</strong> y la producción diaria bajo procesos estandarizados, garantizando eficiencia y calidad en el servicio."
       },
       {
         "role": "Asistente de Gerente",
         "company": "Infopapel, Cádiz",
         "period": "2015 – 2018",
-        "description": "Control de stock, gestión de pedidos, atención a clientes, facturación, entregas, asesoramiento en toma decisiones y conocimiento de productos informáticos y oficina."
+        "description": "Responsable del <strong>control de stock</strong>, gestión de <strong>pedidos</strong>, atención directa a clientes y <strong>facturación</strong>. Asesoramiento en la <strong>toma de decisiones</strong> sobre productos informáticos y de oficina, contribuyendo al crecimiento comercial del negocio."
       }
     ],
     "eduTitle": "Educación",
@@ -64,6 +70,9 @@
     "viewGithubBE": "GitHub (Backend)",
     "viewGithubFE": "GitHub (Frontend)",
     "items": [
+      {
+        "longDesc": "Plataforma SaaS integral de reservas de pistas, gestión de academias de tenis y pagos en línea. Desarrollada con arquitectura limpia (SOLID) en Spring Boot 3 con Java 21 y Angular 18 Standalone. Integra pasarela de pago Stripe adaptativa (Apple/Google Pay), sistema de reservas en tiempo real, exportación automática a calendarios (.ics), generación de recibos PDF oficiales, lista de espera inteligente con notificaciones por email y panel de administración completo. Desplegada en producción mediante CI/CD automatizado."
+      },
       {
         "longDesc": "Plataforma web integral diseñada para digitalizar la operativa del sector hostelero (HORECA). El backend está desarrollado en Spring Boot 3 con Java 21, utilizando seguridad JWT, persistencia mediante JPA/Hibernate y base de datos PostgreSQL ejecutada en Docker. El frontend está maquetado en Angular, implementando vistas para empleados y dueños con control de accesos basado en roles."
       },

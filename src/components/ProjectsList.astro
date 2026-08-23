@@ -1,14 +1,40 @@
 ---
 import { Github, MonitorPlay } from 'lucide-react';
+import ProjectCarousel from './ProjectCarousel';
 
 const projects = [
   {
-    title: "TeamPlate (TFG)",
+    title: "Bubblerally Tennis Platform",
+    images: [
+      "/img/bubblerally-1.png",
+      "/img/bubblerally-2.png",
+      "/img/bubblerally-3.png",
+      "/img/bubblerally-4.png"
+    ],
     tech: [
-      { name: "Spring Boot 3", color: "bg-emerald-600 text-white" },
-      { name: "Angular", color: "bg-red-600 text-white" },
-      { name: "PostgreSQL", color: "bg-sky-600 text-white" },
-      { name: "Docker", color: "bg-blue-500 text-white" }
+      { name: "Java 21" },
+      { name: "Spring Boot 3" },
+      { name: "Angular 18" },
+      { name: "Stripe" },
+      { name: "PostgreSQL" },
+      { name: "Redis" },
+      { name: "Docker" }
+    ],
+    demo: "https://bubblerally.com",
+    longDesc: "Plataforma SaaS integral de reservas de pistas, gestión de academias de tenis y pagos en línea. Desarrollada con arquitectura limpia (SOLID) en Spring Boot 3 con Java 21 y Angular 18 Standalone. Integra pasarela de pago Stripe adaptativa (Apple/Google Pay), sistema de reservas en tiempo real, exportación automática a calendarios (.ics), generación de recibos PDF oficiales, lista de espera inteligente con notificaciones por email y panel de administración completo. Desplegada en producción mediante CI/CD automatizado."
+  },
+  {
+    title: "TeamPlate (TFG)",
+    images: [
+      "/img/teamplate-1.png",
+      "/img/teamplate-2.png",
+      "/img/teamplate-3.png"
+    ],
+    tech: [
+      { name: "Spring Boot 3" },
+      { name: "Angular" },
+      { name: "PostgreSQL" },
+      { name: "Docker" }
     ],
     githubBE: "https://github.com/JesusPastor96/TFG_BE",
     githubFE: "https://github.com/JesusPastor96/TFG_FE",
@@ -18,22 +44,21 @@ const projects = [
   {
     title: "Bailes de Salón",
     tech: [
-      { name: "Spring Boot 3", color: "bg-emerald-600 text-white" },
-      { name: "Angular", color: "bg-red-600 text-white" },
-      { name: "SQL", color: "bg-blue-500 text-white" }
+      { name: "Spring Boot 3" },
+      { name: "Angular" },
+      { name: "SQL" }
     ],
     githubBE: "https://github.com/sofiaffernandez/Reto",
     githubFE: "https://github.com/assxavi/retoFrontend",
     demo: "https://reto.alvaropj.com/",
     longDesc: "Aplicación completa para la gestión y reserva de clases de bailes de salón. Proyecto colaborativo estructurado en una arquitectura desacoplada con la lógica del servidor en Java y la interfaz de usuario en TypeScript, facilitando un flujo dinámico de reservas en tiempo real y gestión de usuarios."
   },
-
   {
     title: "eSports Tournament",
     tech: [
-      { name: "UML", color: "bg-indigo-500 text-white" },
-      { name: "MVC", color: "bg-purple-500 text-white" },
-      { name: "GitHub", color: "bg-zinc-800 text-white" }
+      { name: "UML" },
+      { name: "MVC" },
+      { name: "GitHub" }
     ],
     github: "https://github.com/JesusPastor96/Actividad3-JesusPastorRicoy",
     demo: null,
@@ -46,18 +71,24 @@ const projects = [
   <h3 class="text-2xl font-display font-bold text-foreground mb-8 reveal" data-i18n="projects.title">Proyectos Destacados</h3>
   <div class="space-y-12">
     {projects.map((project, index) => (
-      <div class="flex flex-col md:flex-row md:gap-8 group hover:bg-muted/20 hover:-translate-y-1 hover:shadow-lg p-5 -mx-5 rounded-2xl transition-all duration-300 reveal delay-100 border border-transparent hover:border-border/50">
-        <div class="md:w-1/4 shrink-0 mb-3 md:mb-0">
-          <h4 class="text-lg font-bold text-foreground">{project.title}</h4>
+      <div class="flex flex-col md:flex-row md:items-stretch md:gap-8 p-5 -mx-5 rounded-2xl reveal delay-100">
+        <div class="md:w-5/12 shrink-0 mb-4 md:mb-0 flex flex-col justify-between">
+          <div class="flex flex-col h-full">
+            <h4 class="text-lg font-bold text-foreground mb-3">{project.title}</h4>
+            <div class="flex-1 flex flex-col min-h-0">
+              <ProjectCarousel client:visible images={project.images} title={project.title} demoUrl={project.demo} />
+            </div>
+          </div>
         </div>
-        <div class="md:w-3/4 flex flex-col justify-between">
+
+        <div class="md:w-7/12 flex flex-col justify-between">
           <p class="text-base text-muted-foreground leading-relaxed mb-4" data-i18n={`projects.items.${index}.longDesc`}>
             {project.longDesc}
           </p>
           
           <div class="flex flex-wrap gap-2 mb-5">
             {project.tech.map((t) => (
-              <span class={`font-bold rounded-full px-3 py-1 text-xs select-none ${t.color}`}>
+              <span class="font-mono text-[11px] font-semibold rounded-md px-2.5 py-1 select-none bg-slate-100 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/40 transition-colors duration-200">
                 {t.name}
               </span>
             ))}
@@ -66,22 +97,22 @@ const projects = [
           <div class="flex items-center gap-5 text-sm font-semibold">
             {project.demo && (
               <a href={project.demo} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-primary hover:underline transition-all">
-                <MonitorPlay class="w-4 h-4" /> <span data-i18n="projects.viewDemo">Ver demo</span>
+                <MonitorPlay className="w-4 h-4" /> <span data-i18n="projects.viewDemo">Ver demo</span>
               </a>
             )}
             {project.github && (
               <a href={project.github} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
-                <Github class="w-4 h-4" /> <span data-i18n="projects.viewGithub">Ver en GitHub</span>
+                <Github className="w-4 h-4" /> <span data-i18n="projects.viewGithub">Ver en GitHub</span>
               </a>
             )}
             {project.githubBE && (
               <a href={project.githubBE} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
-                <Github class="w-4 h-4" /> <span data-i18n="projects.viewGithubBE">GitHub (Backend)</span>
+                <Github className="w-4 h-4" /> <span data-i18n="projects.viewGithubBE">GitHub (Backend)</span>
               </a>
             )}
             {project.githubFE && (
               <a href={project.githubFE} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
-                <Github class="w-4 h-4" /> <span data-i18n="projects.viewGithubFE">GitHub (Frontend)</span>
+                <Github className="w-4 h-4" /> <span data-i18n="projects.viewGithubFE">GitHub (Frontend)</span>
               </a>
             )}
           </div>
