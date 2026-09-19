@@ -412,3 +412,22 @@
   pointer-events: auto;
   visibility: visible;
 }
+
+body.lang-changing main,
+body.lang-changing footer,
+body.lang-changing header nav a,
+body.lang-changing #mobile-nav-panel a {
+  opacity: 0.25;
+  filter: blur(4px);
+  transform: translateY(-2px);
+}
+
+main,
+footer,
+header nav a,
+#mobile-nav-panel a {
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, filter;
+}
