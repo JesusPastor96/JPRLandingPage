@@ -1,10 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 
-export default function LanguageSelector({ currentLang: initialLang }: { currentLang?: 'es' | 'en' }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function LanguageSelector() {
   const [lang, setLang] = useState<'es' | 'en'>('es');
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const savedLang = localStorage.getItem('lang') as 'es' | 'en';
@@ -22,56 +19,46 @@ export default function LanguageSelector({ currentLang: initialLang }: { current
     };
     window.addEventListener('languageLoaded', handleLangLoaded);
 
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
       window.removeEventListener('languageLoaded', handleLangLoaded);
     };
   }, []);
 
   const changeLang = (newLang: 'es' | 'en') => {
+    if (lang === newLang) return;
     setLang(newLang);
-    setIsOpen(false);
-    
     if (typeof window !== 'undefined' && (window as any).changeLanguage) {
       (window as any).changeLanguage(newLang);
     }
   };
 
   return (
-    <div className="relative" ref={dropdownRef}>
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1 text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-1.5 py-1 rounded hover:bg-secondary/40"
-        aria-label="Change language"
+    <div className="flex items-center gap-1 font-mono text-xs select-none tracking-wider">
+      <button
+        type="button"
+        onClick={() => changeLang('es')}
+        className={`px-1 py-0.5 transition-colors cursor-pointer border-none bg-transparent outline-none focus:outline-none focus-visible:outline-none ${
+          lang === 'es'
+            ? 'text-foreground font-semibold'
+            : 'text-muted-foreground/45 hover:text-foreground'
+        }`}
+        aria-label="Español"
       >
-        <span>{lang === 'es' ? 'ES' : 'EN'}</span>
-        <ChevronDown className={`w-3 h-3 opacity-70 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        ES
       </button>
-
-      {isOpen && (
-        <div className="absolute right-0 mt-2 w-20 rounded-md border border-border/40 bg-background/95 backdrop-blur-md shadow-lg overflow-hidden z-50">
-          <div className="flex flex-col py-1">
-            <button 
-              onClick={() => changeLang('es')}
-              className={`text-left px-3 py-1.5 text-xs font-mono uppercase tracking-wider hover:bg-secondary/80 transition-colors ${lang === 'es' ? 'font-bold text-primary bg-secondary/30' : 'text-foreground'}`}
-            >
-              ES
-            </button>
-            <button 
-              onClick={() => changeLang('en')}
-              className={`text-left px-3 py-1.5 text-xs font-mono uppercase tracking-wider hover:bg-secondary/80 transition-colors ${lang === 'en' ? 'font-bold text-primary bg-secondary/30' : 'text-foreground'}`}
-            >
-              EN
-            </button>
-          </div>
-        </div>
-      )}
+      <span className="text-border text-[11px] font-light select-none">/</span>
+      <button
+        type="button"
+        onClick={() => changeLang('en')}
+        className={`px-1 py-0.5 transition-colors cursor-pointer border-none bg-transparent outline-none focus:outline-none focus-visible:outline-none ${
+          lang === 'en'
+            ? 'text-foreground font-semibold'
+            : 'text-muted-foreground/45 hover:text-foreground'
+        }`}
+        aria-label="English"
+      >
+        EN
+      </button>
     </div>
   );
 }

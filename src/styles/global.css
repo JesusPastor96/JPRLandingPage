@@ -366,3 +366,49 @@
 ::view-transition-new(root) {
   z-index: 9999;
 }
+
+#mobile-menu-btn .hamburger-bar-top {
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-menu-btn .hamburger-bar-mid {
+  transform-origin: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#mobile-menu-btn .hamburger-bar-bot {
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-menu-btn.is-open .hamburger-bar-top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+#mobile-menu-btn.is-open .hamburger-bar-mid {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+#mobile-menu-btn.is-open .hamburger-bar-bot {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+#mobile-nav-panel {
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+}
+
+#mobile-nav-panel.menu-closed {
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#mobile-nav-panel.menu-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
