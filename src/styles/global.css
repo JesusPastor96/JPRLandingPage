@@ -431,3 +431,13 @@ header nav a,
               transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, filter;
 }
+
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.25s ease-out,
+              border-color 0.25s ease-out,
+              color 0.2s ease-out !important;
+  transition-delay: 0s !important;
+}

@@ -24,8 +24,18 @@ export default function ThemeToggle() {
       }
     };
 
-    if (!(document as any).startViewTransition) {
+    const isMobile = typeof window !== 'undefined' && (
+      window.innerWidth <= 768 || 
+      window.matchMedia('(pointer: coarse)').matches ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    );
+
+    if (isMobile || !(document as any).startViewTransition) {
+      document.documentElement.classList.add('theme-transitioning');
       updateThemeState();
+      setTimeout(() => {
+        document.documentElement.classList.remove('theme-transitioning');
+      }, 300);
       return;
     }
 
@@ -51,8 +61,8 @@ export default function ThemeToggle() {
           ]
         },
         {
-          duration: 750,
-          easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+          duration: 420,
+          easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
           pseudoElement: '::view-transition-new(root)'
         }
       );
