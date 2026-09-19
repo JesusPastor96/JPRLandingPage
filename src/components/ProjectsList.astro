@@ -1,5 +1,5 @@
 ---
-import { Github, MonitorPlay, ArrowUpRight } from 'lucide-react';
+import { Github, MonitorPlay } from 'lucide-react';
 import ProjectCarousel from './ProjectCarousel';
 
 const projects = [
@@ -114,17 +114,16 @@ const projects = [
               ))}
             </div>
 
-            <div class="flex items-center gap-5 text-sm font-medium pt-1">
+            <div class="flex flex-wrap items-center gap-2 pt-1">
               {project.demo && (
                 <a 
                   href={project.demo} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  class="inline-flex items-center gap-1.5 text-foreground hover:text-primary transition-colors font-semibold group/link"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-foreground bg-secondary/80 hover:bg-secondary border border-border/50 hover:border-border transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap"
                 >
-                  <MonitorPlay className="w-4 h-4 text-primary" />
+                  <MonitorPlay className="w-3.5 h-3.5 text-primary" />
                   <span data-i18n="projects.viewDemo">Ver demo</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground group-hover/link:text-primary transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                 </a>
               )}
               {project.github && (
@@ -132,11 +131,10 @@ const projects = [
                   href={project.github} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors group/link"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-muted-foreground hover:text-foreground bg-secondary/40 hover:bg-secondary/80 border border-border/40 hover:border-border transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap"
                 >
-                  <Github className="w-4 h-4" />
+                  <Github className="w-3.5 h-3.5" />
                   <span data-i18n="projects.viewGithub">GitHub</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                 </a>
               )}
               {project.githubBE && (
@@ -144,11 +142,10 @@ const projects = [
                   href={project.githubBE} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors group/link"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-muted-foreground hover:text-foreground bg-secondary/40 hover:bg-secondary/80 border border-border/40 hover:border-border transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap"
                 >
-                  <Github className="w-4 h-4" />
-                  <span data-i18n="projects.viewGithubBE">GitHub (BE)</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                  <Github className="w-3.5 h-3.5" />
+                  <span data-i18n="projects.viewGithubBE">GitHub (Backend)</span>
                 </a>
               )}
               {project.githubFE && (
@@ -156,11 +153,10 @@ const projects = [
                   href={project.githubFE} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors group/link"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-muted-foreground hover:text-foreground bg-secondary/40 hover:bg-secondary/80 border border-border/40 hover:border-border transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap"
                 >
-                  <Github className="w-4 h-4" />
-                  <span data-i18n="projects.viewGithubFE">GitHub (FE)</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                  <Github className="w-3.5 h-3.5" />
+                  <span data-i18n="projects.viewGithubFE">GitHub (Frontend)</span>
                 </a>
               )}
             </div>
