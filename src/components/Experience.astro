@@ -48,38 +48,67 @@ const education = [
 ];
 ---
 
-<section class="py-10 border-b border-border/40">
-  <h3 class="text-2xl font-display font-bold text-foreground mb-8 reveal" data-i18n="experience.title">Experiencia Profesional</h3>
-  <div class="space-y-8">
+<section class="py-8 md:py-9 border-b border-border/40">
+  <div class="mb-6 reveal">
+    <h3 class="text-2xl font-display font-bold text-foreground" data-i18n="experience.title">
+      Experiencia Profesional
+    </h3>
+  </div>
+
+  <div class="divide-y divide-border/30">
     {experience.map((exp, index) => (
-      <div class="flex flex-col md:flex-row md:gap-8 reveal delay-100">
-        <div class="md:w-1/4 shrink-0 mb-2 md:mb-0">
-          <span class="text-sm font-semibold text-muted-foreground/80" data-i18n={`experience.items.${index}.period`}>{exp.period}</span>
+      <article class="py-6 first:pt-0 last:pb-0 reveal" style={`transition-delay: ${index * 80 + 60}ms;`}>
+        <div class="flex flex-col md:flex-row md:gap-8 items-start">
+          <div class="w-full md:w-1/4 shrink-0 mb-2 md:mb-0">
+            <span class="font-mono text-xs sm:text-sm text-muted-foreground/80 uppercase tracking-wider block pt-1" data-i18n={`experience.items.${index}.period`}>
+              {exp.period}
+            </span>
+          </div>
+          <div class="w-full md:w-3/4 flex flex-col">
+            <h4 class="text-lg sm:text-xl font-semibold text-foreground mb-1 tracking-tight" data-i18n={`experience.items.${index}.role`}>
+              {exp.role}
+            </h4>
+            <span class="text-xs sm:text-sm font-mono text-primary font-medium mb-2.5" data-i18n={`experience.items.${index}.company`}>
+              {exp.company}
+            </span>
+            <p class="text-base leading-relaxed text-muted-foreground [&>strong]:font-normal [&>strong]:text-inherit" data-i18n={`experience.items.${index}.description`} set:html={exp.description}>
+            </p>
+          </div>
         </div>
-        <div class="md:w-3/4">
-          <h4 class="text-lg font-bold text-foreground" data-i18n={`experience.items.${index}.role`}>{exp.role}</h4>
-          <span class="block text-sm font-semibold text-primary mb-2" data-i18n={`experience.items.${index}.company`}>{exp.company}</span>
-          <p class="text-base text-muted-foreground leading-relaxed" data-i18n={`experience.items.${index}.description`} set:html={exp.description}></p>
-        </div>
-      </div>
+      </article>
     ))}
   </div>
 </section>
 
-<section class="py-10 border-b border-border/40">
-  <h3 class="text-2xl font-display font-bold text-foreground mb-8 reveal" data-i18n="experience.eduTitle">Educación</h3>
-  <div class="space-y-8">
+<section class="py-8 md:py-9 border-b border-border/40">
+  <div class="mb-6 reveal">
+    <h3 class="text-2xl font-display font-bold text-foreground" data-i18n="experience.eduTitle">
+      Educación
+    </h3>
+  </div>
+
+  <div class="divide-y divide-border/30">
     {education.map((edu, index) => (
-      <div class="flex flex-col md:flex-row md:gap-8 reveal delay-100">
-        <div class="md:w-1/4 shrink-0 mb-2 md:mb-0">
-          <span class="text-sm font-semibold text-muted-foreground/80" data-i18n={`experience.eduItems.${index}.period`}>{edu.period}</span>
+      <article class="py-6 first:pt-0 last:pb-0 reveal" style={`transition-delay: ${index * 80 + 60}ms;`}>
+        <div class="flex flex-col md:flex-row md:gap-8 items-start">
+          <div class="w-full md:w-1/4 shrink-0 mb-2 md:mb-0">
+            <span class="font-mono text-xs sm:text-sm text-muted-foreground/80 uppercase tracking-wider block pt-1" data-i18n={`experience.eduItems.${index}.period`}>
+              {edu.period}
+            </span>
+          </div>
+          <div class="w-full md:w-3/4 flex flex-col">
+            <h4 class="text-lg sm:text-xl font-semibold text-foreground mb-1 tracking-tight" data-i18n={`experience.eduItems.${index}.title`}>
+              {edu.title}
+            </h4>
+            <span class="text-xs sm:text-sm font-mono text-primary font-medium mb-2.5" data-i18n={`experience.eduItems.${index}.institution`}>
+              {edu.institution}
+            </span>
+            <p class="text-base leading-relaxed text-muted-foreground [&>strong]:font-normal [&>strong]:text-inherit" data-i18n={`experience.eduItems.${index}.description`}>
+              {edu.description}
+            </p>
+          </div>
         </div>
-        <div class="md:w-3/4">
-          <h4 class="text-lg font-bold text-foreground" data-i18n={`experience.eduItems.${index}.title`}>{edu.title}</h4>
-          <span class="block text-sm font-semibold text-primary mb-2" data-i18n={`experience.eduItems.${index}.institution`}>{edu.institution}</span>
-          <p class="text-base text-muted-foreground leading-relaxed" data-i18n={`experience.eduItems.${index}.description`}>{edu.description}</p>
-        </div>
-      </div>
+      </article>
     ))}
   </div>
 </section>

@@ -3,12 +3,10 @@ import { Film, RefreshCw } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 function useTranslations() {
-  // @ts-ignore
-  const [t, setT] = useState<any>(typeof window !== 'undefined' ? window.__LANG_DATA__ : null);
+  const [t, setT] = useState<any>(typeof window !== 'undefined' ? (window as any).__LANG_DATA__ : null);
   useEffect(() => {
     const update = () => {
-      // @ts-ignore
-      setT(window.__LANG_DATA__);
+      setT((window as any).__LANG_DATA__);
     };
     update();
     window.addEventListener('languageLoaded', update);
@@ -139,11 +137,8 @@ export default function Interests() {
     }
   ];
 
-  // Try to use translated movies if available, otherwise use fallback
-  // @ts-ignore
-  const translatedMovies = (typeof window !== 'undefined' && window.__LANG_DATA__ && window.__LANG_DATA__.interests && window.__LANG_DATA__.interests.movies) 
-    // @ts-ignore
-    ? window.__LANG_DATA__.interests.movies 
+  const translatedMovies = (typeof window !== 'undefined' && (window as any).__LANG_DATA__ && (window as any).__LANG_DATA__.interests && (window as any).__LANG_DATA__.interests.movies) 
+    ? (window as any).__LANG_DATA__.interests.movies 
     : moviesFallback;
 
   const [index, setIndex] = useState(0);
@@ -171,45 +166,45 @@ export default function Interests() {
   const currentMovie = translatedMovies[index] || moviesFallback[0];
 
   return (
-    <section className="py-10 border-b border-border/40">
+    <section className="py-8 md:py-9 border-b border-border/40">
       <div className="flex flex-col md:flex-row md:gap-8">
-        <div className="md:w-1/4 shrink-0 mb-3 md:mb-0">
-          <h3 className="text-xl font-display font-bold text-foreground">{t("interests.title", "Aficiones")}</h3>
+        <div className="w-full md:w-1/4 shrink-0 mb-3 md:mb-0">
+          <h3 className="text-2xl font-display font-bold text-foreground">{t("interests.title", "Aficiones")}</h3>
         </div>
-        <div className="md:w-3/4">
-          <div className="mb-6">
-            <p className="text-base text-muted-foreground leading-relaxed">
+        <div className="w-full md:w-3/4 flex flex-col">
+          <div className="mb-5">
+            <p className="text-base leading-relaxed text-muted-foreground">
               {t("interests.intro", "Soy un gran apasionado del cine, una afición que no solo me sirve de desconexión, sino que me inspira profundamente en mi día a día como desarrollador. Me fascina encontrar paralelismos entre las grandes historias de la gran pantalla y la lógica del código.")}
             </p>
           </div>
 
           <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{t("interests.random", "Inspiración Aleatoria")}</span>
+            <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{t("interests.random", "Inspiración Aleatoria")}</span>
             <button
               onClick={getNewRecommendation}
-              className="p-1.5 rounded-md hover:bg-secondary text-muted-foreground hover:text-foreground border border-transparent hover:border-border transition-all active:scale-90 cursor-pointer flex items-center gap-1.5"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-muted/40 hover:bg-muted text-xs font-mono text-muted-foreground hover:text-foreground border border-border/60 transition-all active:scale-95 cursor-pointer"
               aria-label="View another movie"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${animating ? 'animate-spin' : ''}`} />
-              <span className="text-xs font-semibold">{t("interests.change", "Cambiar")}</span>
+              <span>{t("interests.change", "Cambiar")}</span>
             </button>
           </div>
 
-          <div className="border-l-2 border-primary/40 pl-4 py-1 min-h-[90px] relative">
+          <div className="border-l-2 border-primary/50 pl-4 py-1.5 min-h-[90px] relative">
             <AnimatePresence mode="wait">
               <motion.div
-                key={index + (t("interests.title", "es"))} // force re-render on language change
+                key={index + (t("interests.title", "es"))}
                 initial={{ opacity: 0, x: -5 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 5 }}
                 transition={{ duration: 0.3 }}
               >
-                <h4 className="text-sm font-bold text-foreground flex items-center gap-2">
+                <h4 className="text-base font-bold text-foreground flex items-center gap-2 tracking-tight">
                   <Film className="w-4 h-4 text-primary" />
                   {currentMovie.title}
                 </h4>
-                <p className="text-sm italic text-muted-foreground mt-1.5">"{currentMovie.quote}"</p>
-                <p className="text-xs font-semibold text-primary/80 mt-2">{currentMovie.relation}</p>
+                <p className="text-sm italic text-muted-foreground mt-1">"{currentMovie.quote}"</p>
+                <p className="text-xs font-mono text-primary font-medium mt-2">{currentMovie.relation}</p>
               </motion.div>
             </AnimatePresence>
           </div>

@@ -4,6 +4,33 @@ function getNested(obj, key) {
   return key.split('.').reduce((o, k) => (o || {})[k], obj);
 }
 
+function sanitizeHtml(dirty) {
+  if (typeof dirty !== 'string') return '';
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(dirty, 'text/html');
+  const allowedTags = new Set(['STRONG', 'EM', 'B', 'I', 'SPAN', 'BR', 'P']);
+  
+  function clean(node) {
+    const children = Array.from(node.childNodes);
+    for (const child of children) {
+      if (child.nodeType === Node.ELEMENT_NODE) {
+        if (!allowedTags.has(child.tagName)) {
+          const textNode = document.createTextNode(child.textContent || '');
+          node.replaceChild(textNode, child);
+        } else {
+          while (child.attributes.length > 0) {
+            child.removeAttribute(child.attributes[0].name);
+          }
+          clean(child);
+        }
+      }
+    }
+  }
+  
+  clean(doc.body);
+  return doc.body.innerHTML;
+}
+
 window.__LANG_DATA__ = null;
 
 async function loadLang(lang) {
@@ -16,8 +43,8 @@ async function loadLang(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
       const text = getNested(data, key);
-      if (text) {
-        el.innerHTML = text;
+      if (text && typeof text === 'string') {
+        el.innerHTML = sanitizeHtml(text);
       }
     });
     

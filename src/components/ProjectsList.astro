@@ -1,9 +1,11 @@
 ---
-import { Github, MonitorPlay } from 'lucide-react';
+import { Github, MonitorPlay, ArrowUpRight } from 'lucide-react';
 import ProjectCarousel from './ProjectCarousel';
 
 const projects = [
   {
+    index: "01",
+    category: "SaaS • Full-Stack",
     title: "Bubblerally Tennis Platform",
     images: [
       "/img/bubblerally-1.png",
@@ -12,18 +14,20 @@ const projects = [
       "/img/bubblerally-4.png"
     ],
     tech: [
-      { name: "Java 21" },
-      { name: "Spring Boot 3" },
-      { name: "Angular 18" },
-      { name: "Stripe" },
-      { name: "PostgreSQL" },
-      { name: "Redis" },
-      { name: "Docker" }
+      "Java 21",
+      "Spring Boot 3",
+      "Angular 18",
+      "Stripe",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
     ],
     demo: "https://bubblerally.com",
     longDesc: "Plataforma SaaS integral de reservas de pistas, gestión de academias de tenis y pagos en línea. Desarrollada con arquitectura limpia (SOLID) en Spring Boot 3 con Java 21 y Angular 18 Standalone. Integra pasarela de pago Stripe adaptativa (Apple/Google Pay), sistema de reservas en tiempo real, exportación automática a calendarios (.ics), generación de recibos PDF oficiales, lista de espera inteligente con notificaciones por email y panel de administración completo. Desplegada en producción mediante CI/CD automatizado."
   },
   {
+    index: "02",
+    category: "Hospitality Management",
     title: "TeamPlate (TFG)",
     images: [
       "/img/teamplate-1.png",
@@ -31,10 +35,11 @@ const projects = [
       "/img/teamplate-3.png"
     ],
     tech: [
-      { name: "Spring Boot 3" },
-      { name: "Angular" },
-      { name: "PostgreSQL" },
-      { name: "Docker" }
+      "Spring Boot 3",
+      "Java 21",
+      "Angular",
+      "PostgreSQL",
+      "Docker"
     ],
     githubBE: "https://github.com/JesusPastor96/TFG_BE",
     githubFE: "https://github.com/JesusPastor96/TFG_FE",
@@ -42,11 +47,13 @@ const projects = [
     longDesc: "Plataforma web integral diseñada para digitalizar la operativa del sector hostelero (HORECA). El backend está desarrollado en Spring Boot 3 con Java 21, utilizando seguridad JWT, persistencia mediante JPA/Hibernate y base de datos PostgreSQL ejecutada en Docker. El frontend está maquetado en Angular, implementando vistas para empleados y dueños con control de accesos basado en roles."
   },
   {
+    index: "03",
+    category: "Web App & Bookings",
     title: "Bailes de Salón",
     tech: [
-      { name: "Spring Boot 3" },
-      { name: "Angular" },
-      { name: "SQL" }
+      "Spring Boot 3",
+      "Angular",
+      "SQL"
     ],
     githubBE: "https://github.com/sofiaffernandez/Reto",
     githubFE: "https://github.com/assxavi/retoFrontend",
@@ -54,11 +61,13 @@ const projects = [
     longDesc: "Aplicación completa para la gestión y reserva de clases de bailes de salón. Proyecto colaborativo estructurado en una arquitectura desacoplada con la lógica del servidor en Java y la interfaz de usuario en TypeScript, facilitando un flujo dinámico de reservas en tiempo real y gestión de usuarios."
   },
   {
+    index: "04",
+    category: "Architecture & Modeling",
     title: "eSports Tournament",
     tech: [
-      { name: "UML" },
-      { name: "MVC" },
-      { name: "GitHub" }
+      "UML",
+      "MVC",
+      "GitHub"
     ],
     github: "https://github.com/JesusPastor96/Actividad3-JesusPastorRicoy",
     demo: null,
@@ -67,57 +76,97 @@ const projects = [
 ];
 ---
 
-<section class="py-10 border-b border-border/40">
-  <h3 class="text-2xl font-display font-bold text-foreground mb-8 reveal" data-i18n="projects.title">Proyectos Destacados</h3>
-  <div class="space-y-12">
+<section class="py-8 md:py-9 border-b border-border/40">
+  <div class="mb-6 reveal">
+    <h3 class="text-2xl font-display font-bold text-foreground" data-i18n="projects.title">
+      Proyectos Destacados
+    </h3>
+  </div>
+
+  <div class="divide-y divide-border/30">
     {projects.map((project, index) => (
-      <div class="flex flex-col md:flex-row md:items-stretch md:gap-8 p-5 -mx-5 rounded-2xl reveal delay-100">
-        <div class="md:w-5/12 shrink-0 mb-4 md:mb-0 flex flex-col justify-between">
-          <div class="flex flex-col h-full">
-            <h4 class="text-lg font-bold text-foreground mb-3">{project.title}</h4>
-            <div class="flex-1 flex flex-col min-h-0">
-              <ProjectCarousel client:visible images={project.images} title={project.title} demoUrl={project.demo} />
+      <article class="py-7 first:pt-0 last:pb-0 reveal" style={`transition-delay: ${index * 100 + 60}ms;`}>
+        <div class="flex flex-col md:flex-row md:gap-8 items-start">
+          <div class="w-full md:w-5/12 shrink-0 mb-4 md:mb-0">
+            <ProjectCarousel client:visible images={project.images} title={project.title} demoUrl={project.demo} />
+          </div>
+
+          <div class="w-full md:w-7/12 flex flex-col">
+            <div class="flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-wider mb-1">
+              <span>{project.index}</span>
+              <span class="opacity-40">/</span>
+              <span class="text-foreground/70">{project.category}</span>
+            </div>
+
+            <h4 class="text-lg sm:text-xl font-bold text-foreground mb-2 tracking-tight">
+              {project.title}
+            </h4>
+
+            <p class="text-base leading-relaxed text-muted-foreground mb-4" data-i18n={`projects.items.${index}.longDesc`}>
+              {project.longDesc}
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              {project.tech.map((t) => (
+                <span class="font-mono text-[11px] px-2.5 py-0.5 rounded bg-muted/40 text-foreground/80 border border-border/60">
+                  {typeof t === 'string' ? t : t.name}
+                </span>
+              ))}
+            </div>
+
+            <div class="flex items-center gap-5 text-sm font-medium pt-1">
+              {project.demo && (
+                <a 
+                  href={project.demo} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-1.5 text-foreground hover:text-primary transition-colors font-semibold group/link"
+                >
+                  <MonitorPlay className="w-4 h-4 text-primary" />
+                  <span data-i18n="projects.viewDemo">Ver demo</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground group-hover/link:text-primary transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                </a>
+              )}
+              {project.github && (
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors group/link"
+                >
+                  <Github className="w-4 h-4" />
+                  <span data-i18n="projects.viewGithub">GitHub</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                </a>
+              )}
+              {project.githubBE && (
+                <a 
+                  href={project.githubBE} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors group/link"
+                >
+                  <Github className="w-4 h-4" />
+                  <span data-i18n="projects.viewGithubBE">GitHub (BE)</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                </a>
+              )}
+              {project.githubFE && (
+                <a 
+                  href={project.githubFE} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors group/link"
+                >
+                  <Github className="w-4 h-4" />
+                  <span data-i18n="projects.viewGithubFE">GitHub (FE)</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                </a>
+              )}
             </div>
           </div>
         </div>
-
-        <div class="md:w-7/12 flex flex-col justify-between">
-          <p class="text-base text-muted-foreground leading-relaxed mb-4" data-i18n={`projects.items.${index}.longDesc`}>
-            {project.longDesc}
-          </p>
-          
-          <div class="flex flex-wrap gap-2 mb-5">
-            {project.tech.map((t) => (
-              <span class="font-mono text-[11px] font-semibold rounded-md px-2.5 py-1 select-none bg-slate-100 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/40 transition-colors duration-200">
-                {t.name}
-              </span>
-            ))}
-          </div>
-
-          <div class="flex items-center gap-5 text-sm font-semibold">
-            {project.demo && (
-              <a href={project.demo} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-primary hover:underline transition-all">
-                <MonitorPlay className="w-4 h-4" /> <span data-i18n="projects.viewDemo">Ver demo</span>
-              </a>
-            )}
-            {project.github && (
-              <a href={project.github} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
-                <Github className="w-4 h-4" /> <span data-i18n="projects.viewGithub">Ver en GitHub</span>
-              </a>
-            )}
-            {project.githubBE && (
-              <a href={project.githubBE} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
-                <Github className="w-4 h-4" /> <span data-i18n="projects.viewGithubBE">GitHub (Backend)</span>
-              </a>
-            )}
-            {project.githubFE && (
-              <a href={project.githubFE} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
-                <Github className="w-4 h-4" /> <span data-i18n="projects.viewGithubFE">GitHub (Frontend)</span>
-              </a>
-            )}
-          </div>
-        </div>
-      </div>
+      </article>
     ))}
   </div>
 </section>

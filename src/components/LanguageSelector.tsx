@@ -47,26 +47,27 @@ export default function LanguageSelector({ currentLang: initialLang }: { current
     <div className="relative" ref={dropdownRef}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+        className="flex items-center gap-1 text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors cursor-pointer px-1.5 py-1 rounded hover:bg-secondary/40"
+        aria-label="Change language"
       >
-        {lang === 'es' ? 'Español' : 'English'}
-        <ChevronDown className={`w-3.5 h-3.5 opacity-70 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <span>{lang === 'es' ? 'ES' : 'EN'}</span>
+        <ChevronDown className={`w-3 h-3 opacity-70 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-28 rounded-md border border-border/40 bg-background/95 backdrop-blur-md shadow-lg overflow-hidden z-50">
+        <div className="absolute right-0 mt-2 w-20 rounded-md border border-border/40 bg-background/95 backdrop-blur-md shadow-lg overflow-hidden z-50">
           <div className="flex flex-col py-1">
             <button 
               onClick={() => changeLang('es')}
-              className={`text-left px-4 py-2 text-sm hover:bg-secondary/80 transition-colors ${lang === 'es' ? 'font-bold text-primary bg-secondary/30' : 'text-foreground'}`}
+              className={`text-left px-3 py-1.5 text-xs font-mono uppercase tracking-wider hover:bg-secondary/80 transition-colors ${lang === 'es' ? 'font-bold text-primary bg-secondary/30' : 'text-foreground'}`}
             >
-              Español
+              ES
             </button>
             <button 
               onClick={() => changeLang('en')}
-              className={`text-left px-4 py-2 text-sm hover:bg-secondary/80 transition-colors ${lang === 'en' ? 'font-bold text-primary bg-secondary/30' : 'text-foreground'}`}
+              className={`text-left px-3 py-1.5 text-xs font-mono uppercase tracking-wider hover:bg-secondary/80 transition-colors ${lang === 'en' ? 'font-bold text-primary bg-secondary/30' : 'text-foreground'}`}
             >
-              English
+              EN
             </button>
           </div>
         </div>

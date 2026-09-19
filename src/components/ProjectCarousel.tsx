@@ -13,9 +13,9 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, title 
 
   if (!images || images.length === 0) {
     return (
-      <div className="relative h-full min-h-[160px] sm:min-h-[180px] w-full flex-1 overflow-hidden rounded-xl border border-dashed border-slate-300 dark:border-border/40 bg-slate-100/60 dark:bg-slate-950/40 flex flex-col items-center justify-center gap-2 p-4 select-none">
-        <ImageIcon className="w-8 h-8 text-slate-400 dark:text-muted-foreground/30" />
-        <span className="text-xs text-slate-500 dark:text-muted-foreground/50 font-medium">Captura próximamente</span>
+      <div className="w-full aspect-[16/10] overflow-hidden rounded-xl border border-border/50 bg-muted/20 flex flex-col items-center justify-center gap-2 select-none">
+        <ImageIcon className="w-6 h-6 text-muted-foreground/40" />
+        <span className="text-xs text-muted-foreground/60 font-mono">Sin capturas</span>
       </div>
     );
   }
@@ -39,58 +39,51 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, title 
   };
 
   return (
-    <div className="relative group/carousel h-full w-full flex-1 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-950/60 border border-slate-200 dark:border-transparent shadow-sm flex flex-col">
-      {/* Container with contain alignment */}
-      <div className="relative h-full min-h-[200px] w-full flex-1 overflow-hidden flex items-center justify-center bg-slate-100 dark:bg-slate-950 p-1">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentIndex}
-            src={images[currentIndex]}
-            alt={`Captura ${currentIndex + 1} de ${title}`}
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.02 }}
-            transition={{ duration: 0.35, ease: 'easeOut' }}
-            className="h-full w-full object-contain object-center rounded-lg select-none"
-          />
-        </AnimatePresence>
+    <div className="relative group/carousel w-full aspect-[16/10] overflow-hidden rounded-xl border border-border/50 bg-muted/15 flex items-center justify-center">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={currentIndex}
+          src={images[currentIndex]}
+          alt={`Captura ${currentIndex + 1} de ${title}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="h-full w-full object-contain object-center p-2 select-none"
+        />
+      </AnimatePresence>
 
-        {/* Navigation Arrows */}
-        {images.length > 1 && (
-          <>
-            <button
-              onClick={prevImage}
-              aria-label="Imagen anterior"
-              className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-slate-200 dark:border-border/50 bg-white/90 dark:bg-background/80 p-2 text-slate-800 dark:text-foreground shadow-md backdrop-blur-md transition-all hover:bg-white dark:hover:bg-background hover:scale-110 active:scale-95"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-            <button
-              onClick={nextImage}
-              aria-label="Siguiente imagen"
-              className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-slate-200 dark:border-border/50 bg-white/90 dark:bg-background/80 p-2 text-slate-800 dark:text-foreground shadow-md backdrop-blur-md transition-all hover:bg-white dark:hover:bg-background hover:scale-110 active:scale-95"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={prevImage}
+            aria-label="Imagen anterior"
+            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full border border-border/40 bg-background/80 p-1.5 text-foreground/80 shadow-sm backdrop-blur-sm opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-background hover:text-foreground cursor-pointer"
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </button>
+          <button
+            onClick={nextImage}
+            aria-label="Siguiente imagen"
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-border/40 bg-background/80 p-1.5 text-foreground/80 shadow-sm backdrop-blur-sm opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-background hover:text-foreground cursor-pointer"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </button>
 
-            {/* Carousel Indicators / Dots */}
-            <div className="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-slate-900/70 dark:bg-slate-950/60 px-3 py-1.5 backdrop-blur-md">
-              {images.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={(e) => selectIndex(e, idx)}
-                  aria-label={`Ir a imagen ${idx + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    idx === currentIndex
-                      ? 'w-5 bg-primary'
-                      : 'w-2 bg-slate-400/50 hover:bg-slate-300'
-                  }`}
-                />
-              ))}
-            </div>
-          </>
-        )}
-      </div>
+          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1 px-2 py-1 rounded-full bg-background/70 backdrop-blur-sm border border-border/30">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={(e) => selectIndex(e, idx)}
+                aria-label={`Ir a imagen ${idx + 1}`}
+                className={`h-1 rounded-full transition-all duration-200 cursor-pointer ${
+                  idx === currentIndex ? 'w-4 bg-foreground' : 'w-1 bg-muted-foreground/40 hover:bg-muted-foreground/70'
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
